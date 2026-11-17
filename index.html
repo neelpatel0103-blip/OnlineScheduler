@@ -1723,17 +1723,18 @@
                document.getElementById('weekYear').value = weekStart.slice(0, 4);
            }
 
-           function shiftWeekStart(weekStart, days) {
-               const date = new Date(`${weekStart}T12:00:00`);
-               date.setDate(date.getDate() + days);
-               return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-           }
-
-           function getCurrentWeekStart() {
+           function getPreviousMonthScheduleWeeks() {
                const today = new Date();
-               today.setHours(12, 0, 0, 0);
-               today.setDate(today.getDate() - ((today.getDay() + 6) % 7));
-               return `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+               const monthStart = new Date(today.getFullYear(), today.getMonth() - 1, 1, 12);
+               const monthEnd = new Date(today.getFullYear(), today.getMonth(), 0, 12);
+               const monthKey = `${monthStart.getFullYear()}-${String(monthStart.getMonth() + 1).padStart(2, '0')}`;
+               const firstWeek = new Date(monthStart);
+               firstWeek.setDate(firstWeek.getDate() - ((firstWeek.getDay() + 6) % 7));
+               const weekStarts = [];
+               for (const week = new Date(firstWeek); week <= monthEnd; week.setDate(week.getDate() + 7)) {
+                   weekStarts.push(`${week.getFullYear()}-${String(week.getMonth() + 1).padStart(2, '0')}-${String(week.getDate()).padStart(2, '0')}`);
+               }
+               return { monthKey, weekStarts };
            }
 
            function loadPdfLibrary() {
@@ -1816,15 +1817,14 @@
                }
 
                sheet.querySelectorAll('[id]').forEach((element) => element.removeAttribute('id'));
-               sheet.style.position = 'fixed';
-               sheet.style.left = '-10000px';
-               sheet.style.top = '0';
                sheet.style.width = '920px';
                sheet.style.maxWidth = 'none';
                sheet.style.minHeight = '0';
                sheet.style.margin = '0';
                sheet.style.padding = '16px 12px';
                sheet.style.boxShadow = 'none';
+               sheet.style.visibility = 'hidden';
+               sheet.dataset.pdfExport = 'true';
                return sheet;
            }
 
@@ -1839,7 +1839,15 @@
                        margin: [0.35, 0.35, 0.35, 0.35],
                        filename: `staff-schedule-week-${weekStart}.pdf`,
                        image: { type: 'jpeg', quality: 0.98 },
-                       html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', windowWidth: 1200 },
+                       html2canvas: {
+                           scale: 2,
+                           useCORS: true,
+                           backgroundColor: '#ffffff',
+                           onclone: (clonedDocument) => {
+                               const exportSheet = clonedDocument.querySelector('[data-pdf-export="true"]');
+                               if (exportSheet) exportSheet.style.visibility = 'visible';
+                           }
+                       },
                        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
                        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
                    }).from(sheet).save();
@@ -1848,24 +1856,29 @@
                }
            }
 
-           async function autoDownloadCompletedWeek() {
+           async function autoDownloadMonthlySchedules() {
                if (!currentUser || !isAdmin || autoDownloadInProgress) return;
-               const weekStart = shiftWeekStart(getCurrentWeekStart(), -7);
-               const key = `weekly-schedule-pdf:${currentUser.id}:${weekStart}`;
+               const { monthKey, weekStarts } = getPreviousMonthScheduleWeeks();
+               const key = `monthly-schedule-pdfs:${currentUser.id}:${monthKey}`;
                const now = Date.now();
                try {
                    if (lastAutoDownloadAttempt.key === key && now - lastAutoDownloadAttempt.at < 300000) return;
                    lastAutoDownloadAttempt = { key, at: now };
                    if (localStorage.getItem(key)) return;
                    autoDownloadInProgress = true;
-                   await downloadCompletedWeek(weekStart);
+                   for (const weekStart of weekStarts) {
+                       const weekKey = `${key}:${weekStart}`;
+                       if (localStorage.getItem(weekKey)) continue;
+                       await downloadCompletedWeek(weekStart);
+                       localStorage.setItem(weekKey, 'downloaded');
+                   }
                    localStorage.setItem(key, 'downloaded');
                    autoDownloadError = false;
-                   setSaveStatus('Previous week PDF download requested', 'saved');
+                   setSaveStatus('Previous month schedule PDFs requested', 'saved');
                } catch (error) {
-                   console.error('Automatic previous-week PDF download failed:', error);
+                   console.error('Automatic monthly schedule PDF download failed:', error);
                    autoDownloadError = true;
-                   setSaveStatus('Previous week PDF download failed', 'error');
+                   setSaveStatus('Monthly schedule PDF download failed', 'error');
                } finally {
                    autoDownloadInProgress = false;
                }
@@ -1934,7 +1947,7 @@
                if (isAdmin) renderAdminAssignments();
                hasLoadedSchedule = true;
                if (!autoDownloadError) setSaveStatus('Online', 'saved');
-               autoDownloadCompletedWeek();
+               autoDownloadMonthlySchedules();
            }
 
            window.loadSchedule = function () {
