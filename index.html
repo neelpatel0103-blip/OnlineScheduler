@@ -157,6 +157,12 @@
             box-shadow: inset 0 0 0 1.5px #2563eb;
         }
 
+        .cell-editor.extra-shift-editor {
+            background-color: #fef3c7;
+            color: #92400e;
+            font-weight: 700;
+        }
+
         /* Custom Modal Backdrop */
         .modal-backdrop {
             background-color: rgba(0, 0, 0, 0.45);
@@ -193,6 +199,11 @@
             .cell-editor {
                 background-color: transparent !important;
                 box-shadow: none !important;
+            }
+
+            .cell-editor.extra-shift-editor {
+                background-color: #fef3c7 !important;
+                color: #92400e !important;
             }
 
             .staff-total-badge {
@@ -372,8 +383,8 @@
                     </section>
                 </div>
                 <section class="mt-5 rounded-lg border border-neutral-200 p-4">
-                    <h3 class="font-semibold text-neutral-900">Coverage requirement</h3>
-                    <p class="mt-1 text-sm text-neutral-600">The default is two staff for each half-hour. Add a higher headcount for a selected period when needed.</p>
+                    <h3 class="font-semibold text-neutral-900">Rush-hour coverage &amp; extra staff</h3>
+                    <p class="mt-1 text-sm text-neutral-600">Two staff are required by default. For business rush hours, select a time range and set the requirement to three or more staff; staff can then book the extra open hours in that period.</p>
                     <div class="mt-3 grid gap-3 sm:grid-cols-5">
                         <label class="text-sm font-medium text-neutral-700">Day
                             <select id="coverageDay" class="portal-input mt-1">
@@ -387,7 +398,7 @@
                         <label class="text-sm font-medium text-neutral-700">To
                             <select id="coverageEnd" class="portal-input mt-1"></select>
                         </label>
-                        <label class="text-sm font-medium text-neutral-700">Staff needed
+                        <label class="text-sm font-medium text-neutral-700">Staff needed in this period
                             <select id="coverageCount" class="portal-input mt-1">
                                 <option value="2">2 staff</option><option value="3">3 staff</option><option value="4">4 staff</option><option value="5">5 staff</option>
                             </select>
@@ -428,8 +439,8 @@
                 <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                         <p class="text-xs font-bold uppercase tracking-wider text-neutral-500">Staff scheduling</p>
-                        <h2 class="mt-1 text-xl font-bold text-neutral-900">Select available work time</h2>
-                        <p class="mt-1 text-sm text-neutral-600">Operating hours: weekdays 10:00 am–4:00 am; weekends 11:00 am–4:00 am. Times are in 30-minute increments.</p>
+                        <h2 class="mt-1 text-xl font-bold text-neutral-900">Book work hours or pick up extra hours</h2>
+                        <p class="mt-1 text-sm text-neutral-600">Choose an open period to add hours. If an administrator sets a rush-hour target of three or more staff, available extra places appear until that target is met. Operating hours: weekdays 10:00 am–4:00 am; weekends 11:00 am–4:00 am. Times are in 30-minute increments.</p>
                     </div>
                     <div id="bookingStatus" role="status" aria-live="polite" class="text-sm text-neutral-600"></div>
                 </div>
@@ -448,17 +459,18 @@
                     </label>
                     <label class="text-sm font-medium text-neutral-700">Selection
                         <select id="bookingMode" class="portal-input mt-1">
-                            <option value="exact">Book this whole time</option>
-                            <option value="available">Allocate available time in this window</option>
+                            <option value="exact">Book this exact time</option>
+                            <option value="available">Add all available hours in this window</option>
+                            <option value="extra">Record extra / call-in hours</option>
                         </select>
                     </label>
                     <div class="flex flex-wrap items-end gap-2">
-                        <button id="bookTimeButton" type="button" class="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-700">Add time</button>
+                        <button id="bookTimeButton" type="button" class="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-700">Add hours</button>
                         <button id="markDayOffButton" type="button" class="rounded-lg border border-neutral-300 px-3 py-2 text-sm font-semibold text-neutral-800 hover:bg-neutral-50">Mark holiday</button>
                     </div>
                 </div>
                 <p class="mt-3 text-xs text-neutral-500">A successful selection is posted to the shared schedule immediately and cannot be changed by staff. Contact an administrator for corrections. A “—” means no shift or a selected holiday.</p>
-                <p class="mt-2 text-xs text-neutral-500">Fully booked periods are omitted when booking an exact time. “Allocate available time” skips filled periods and assigns only open half-hour blocks in your selected window.</p>
+                <p class="mt-2 text-xs text-neutral-500">Fully booked periods are omitted for regular bookings. Choose “Record extra / call-in hours” when you were called in to work on top of the scheduled staff; these hours are color-coded and count toward totals.</p>
             </div>
         </section>
 
@@ -467,7 +479,7 @@
                 <div class="flex flex-wrap items-center justify-between gap-3">
                     <div>
                         <h2 class="font-semibold text-neutral-900">Staffing coverage by time</h2>
-                        <p class="mt-1 text-xs text-neutral-500">Each block represents 30 minutes. Color shows the number of assigned staff.</p>
+                        <p class="mt-1 text-xs text-neutral-500">Each block represents 30 minutes. Color shows assigned staff; an amber outline means the period is still below its required staff target. Amber schedule cells marked EXTRA identify call-in hours. Hover a block to see assigned and required counts.</p>
                     </div>
                     <div class="flex flex-wrap gap-3 text-xs text-neutral-700">
                         <span><i class="mr-1 inline-block h-3 w-3 rounded bg-red-500"></i>2</span>
@@ -685,7 +697,7 @@
             // Split multiple shifts in a single day cell by comma, slash, semicolon, or newline
             const segments = cellText
                 .split(/[,;\n\/]+/)
-                .map(s => s.trim())
+                .map(s => s.trim().replace(/\s*\(EXTRA\)\s*/gi, ''))
                 .filter(Boolean);
 
             let cellTotal = 0;
@@ -1097,10 +1109,12 @@
                }
                scheduleData.assignments.forEach((assignment) => {
                    const row = document.createElement('div');
-                   row.className = 'grid gap-2 rounded-lg border border-neutral-200 p-3 sm:grid-cols-[1fr_auto_auto_auto] sm:items-center';
+                   row.className = 'grid gap-2 rounded-lg border border-neutral-200 p-3 sm:grid-cols-[1fr_auto_auto_auto_auto] sm:items-center';
                    const label = document.createElement('span');
-                   label.className = 'text-sm font-medium text-neutral-800';
-                   label.textContent = `${assignment.display_name || assignment.username} · ${DAY_NAMES[assignment.day_index]} · ${formatClockMinute(assignment.start_minute)}–${formatClockMinute(assignment.end_minute)}`;
+                   label.className = assignment.is_extra
+                       ? 'rounded bg-amber-100 px-2 py-1 text-sm font-medium text-amber-900'
+                       : 'text-sm font-medium text-neutral-800';
+                   label.textContent = `${assignment.display_name || assignment.username} · ${DAY_NAMES[assignment.day_index]} · ${formatClockMinute(assignment.start_minute)}–${formatClockMinute(assignment.end_minute)}${assignment.is_extra ? ' · EXTRA / CALL-IN' : ''}`;
                    const from = document.createElement('input');
                    from.type = 'time';
                    from.step = '1800';
@@ -1111,20 +1125,26 @@
                    to.step = '1800';
                    to.value = toClockValue(assignment.end_minute);
                    to.className = 'portal-input';
+                   const extraLabel = document.createElement('label');
+                   extraLabel.className = 'flex items-center gap-2 whitespace-nowrap text-sm text-amber-900';
+                   const extraInput = document.createElement('input');
+                   extraInput.type = 'checkbox';
+                   extraInput.checked = assignment.is_extra === true;
+                   extraLabel.append(extraInput, document.createTextNode('Extra / call-in'));
                    const actions = document.createElement('div');
                    actions.className = 'flex gap-2';
                    const save = document.createElement('button');
                    save.type = 'button';
                    save.className = 'rounded-lg border border-neutral-300 px-3 py-2 text-sm hover:bg-neutral-50';
                    save.textContent = 'Update';
-                   save.addEventListener('click', () => updateAssignment(assignment, from.value, to.value));
+                   save.addEventListener('click', () => updateAssignment(assignment, from.value, to.value, extraInput.checked));
                    const remove = document.createElement('button');
                    remove.type = 'button';
                    remove.className = 'rounded-lg border border-red-200 px-3 py-2 text-sm text-red-700 hover:bg-red-50';
                    remove.textContent = 'Delete';
                    remove.addEventListener('click', () => deleteAssignment(assignment.id));
                    actions.append(save, remove);
-                   row.append(label, from, to, actions);
+                   row.append(label, from, to, extraLabel, actions);
                    list.appendChild(row);
                });
                (scheduleData.day_offs || []).forEach((dayOff) => {
@@ -1171,7 +1191,7 @@
                    startSelect.replaceChildren();
                    const startOptions = [];
                    for (let minute = start; minute < end; minute += 30) {
-                       if (!isHoliday && (bookingMode.value === 'available' || available(minute))) startOptions.push(minute);
+                       if (!isHoliday && (bookingMode.value === 'available' || bookingMode.value === 'extra' || available(minute))) startOptions.push(minute);
                    }
                    appendOptions(startSelect, startOptions);
                    if (startOptions.length === 0) {
@@ -1226,7 +1246,7 @@
                        for (let day = 0; day < 7; day++) {
                            const shifts = personAssignments.filter((item) => Number(item.day_index) === day).sort((a, b) => a.start_minute - b.start_minute);
                            row.push(shifts.length
-                               ? shifts.map((item) => `${formatClockMinute(item.start_minute)} - ${formatClockMinute(item.end_minute)}`).join('\n')
+                               ? shifts.map((item) => `${formatClockMinute(item.start_minute)} - ${formatClockMinute(item.end_minute)}${item.is_extra ? ' (EXTRA)' : ''}`).join('\n')
                                : '—');
                        }
                        row.push(person.username);
@@ -1240,11 +1260,23 @@
                document.getElementById('weekEnd').value = weekEnd.toLocaleDateString();
                document.getElementById('weekYear').value = activeWeekStart.slice(0, 4);
                renderTableBody();
+               assignments.filter((item) => item.is_extra === true).forEach((assignment) => {
+                   const staffIndex = staff.findIndex((person) => person.id === assignment.user_id);
+                   const editor = document.querySelector(`.cell-editor[data-row="${staffIndex}"][data-col="${Number(assignment.day_index) + 1}"]`);
+                   if (editor) {
+                       editor.classList.add('extra-shift-editor');
+                       editor.title = 'Includes extra/call-in hours, marked (EXTRA).';
+                   }
+               });
                scheduleState.rows.forEach((row, index) => {
-                   const totalMinutes = assignments.filter((item) => item.user_id === staff[index].id)
+                   const personAssignments = assignments.filter((item) => item.user_id === staff[index].id);
+                   const totalMinutes = personAssignments
                        .reduce((sum, item) => sum + Number(item.end_minute) - Number(item.start_minute), 0);
                    const badge = document.getElementById(`row-total-${index}`);
-                   if (badge) badge.textContent = `Total: ${(totalMinutes / 60).toFixed(1).replace(/\\.0$/, '')} hrs`;
+                   if (badge) {
+                       const extraNote = personAssignments.some((item) => item.is_extra === true) ? ' (includes extra)' : '';
+                       badge.textContent = `Total: ${(totalMinutes / 60).toFixed(1).replace(/\\.0$/, '')} hrs${extraNote}`;
+                   }
                });
                renderCoverage();
                populateTimeSelectors(Number(document.getElementById('bookingDay').value));
@@ -1436,7 +1468,8 @@
                    return;
                }
                const hours = segments.reduce((sum, segment) => sum + segment.end_minute - segment.start_minute, 0) / 60;
-               setBookingStatus(`Added ${hours} hour${hours === 1 ? '' : 's'} to the shared schedule.`, false);
+               const extraMessage = document.getElementById('bookingMode').value === 'extra' ? ' as extra/call-in hours' : '';
+               setBookingStatus(`Added ${hours} hour${hours === 1 ? '' : 's'} to the shared schedule${extraMessage}.`, false);
                await loadScheduleFromCloud();
            }
 
@@ -1503,11 +1536,12 @@
                await loadScheduleFromCloud();
            }
 
-           async function updateAssignment(assignment, startValue, endValue) {
+           async function updateAssignment(assignment, startValue, endValue, isExtra) {
                const { error } = await client.rpc('admin_update_booking', {
                    p_assignment_id: assignment.id,
                    p_start_minute: toOperatingMinute(startValue, Number(assignment.day_index)),
-                   p_end_minute: toOperatingMinute(endValue, Number(assignment.day_index))
+                   p_end_minute: toOperatingMinute(endValue, Number(assignment.day_index)),
+                   p_is_extra: isExtra
                });
                if (error) {
                    setAdminStatus(error.message, true);
@@ -1678,7 +1712,12 @@
                        body: { username: identifier, password }
                    });
                    if (error) {
-                       setAuthMessage('Sign-in failed. Check your username and password, or contact the administrator.', 'error');
+                       if (error.name === 'FunctionsFetchError') {
+                           console.error('Username sign-in service could not be reached:', error);
+                           setAuthMessage('Username sign-in could not reach Supabase. Add this website URL to the sign-in function ALLOWED_ORIGINS setting, then deploy the function.', 'error');
+                       } else {
+                           setAuthMessage('Sign-in failed. Check your username and password, email verification, and the Supabase sign-in function configuration.', 'error');
+                       }
                        return;
                    }
                    if (!data || !data.access_token || !data.refresh_token) {
