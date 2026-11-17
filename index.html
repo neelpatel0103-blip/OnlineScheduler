@@ -182,6 +182,10 @@
                 padding: 0 !important;
             }
 
+            #applicationView {
+                padding-left: 0 !important;
+            }
+
             .no-print {
                 display: none !important;
             }
@@ -274,6 +278,46 @@
             border-left: 4px solid #2563eb;
             background: #f8fafc;
         }
+
+        .portal-sidebar {
+            background: #0f172a;
+        }
+
+        #applicationView.portal-access-blocked {
+            padding-left: 0 !important;
+        }
+
+        .portal-nav-link {
+            align-items: center;
+            border-radius: 12px;
+            color: #94a3b8;
+            display: flex;
+            font-size: 15px;
+            font-weight: 600;
+            gap: 12px;
+            padding: 13px 14px;
+            text-align: left;
+            transition: background-color 0.15s ease, color 0.15s ease;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .portal-nav-link:hover {
+            background: #1e293b;
+            color: #ffffff;
+        }
+
+        .portal-nav-link.is-active {
+            background: #4f46e5;
+            box-shadow: 0 6px 16px rgba(79, 70, 229, 0.22);
+            color: #ffffff;
+        }
+
+        @media (max-width: 1023px) {
+            .portal-nav-link {
+                width: auto;
+            }
+        }
     </style>
 <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mt-10{margin-top:2.5rem}.mt-9{margin-top:2.25rem}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-2\.5{height:0.625rem}.h-3\.5{height:0.875rem}.w-2\.5{width:0.625rem}.w-3\.5{width:0.875rem}.w-\[210px\]{width:210px}.w-\[54px\]{width:54px}.w-full{width:100%}.max-w-\[660px\]{max-width:660px}.max-w-\[920px\]{max-width:920px}.max-w-sm{max-width:24rem}.cursor-pointer{cursor:pointer}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.whitespace-nowrap{white-space:nowrap}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.\!border-b-0{border-bottom-width:0px !important}.border-b{border-bottom-width:1px}.border-neutral-200{--tw-border-opacity:1;border-color:rgb(229 229 229 / var(--tw-border-opacity, 1))}.border-neutral-600{--tw-border-opacity:1;border-color:rgb(82 82 82 / var(--tw-border-opacity, 1))}.border-neutral-700{--tw-border-opacity:1;border-color:rgb(64 64 64 / var(--tw-border-opacity, 1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.bg-neutral-100{--tw-bg-opacity:1;background-color:rgb(245 245 245 / var(--tw-bg-opacity, 1))}.bg-neutral-800{--tw-bg-opacity:1;background-color:rgb(38 38 38 / var(--tw-bg-opacity, 1))}.bg-neutral-900\/95{background-color:rgb(23 23 23 / 0.95)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-\[12\.5px\]{font-size:12.5px}.text-\[15\.5px\]{font-size:15.5px}.text-\[16px\]{font-size:16px}.text-\[28px\]{font-size:28px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.35\]{line-height:1.35}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.01em\]{letter-spacing:0.01em}.tracking-\[0\.02em\]{letter-spacing:0.02em}.tracking-wide{letter-spacing:0.025em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-neutral-100{--tw-text-opacity:1;color:rgb(245 245 245 / var(--tw-text-opacity, 1))}.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163 / var(--tw-text-opacity, 1))}.text-neutral-600{--tw-text-opacity:1;color:rgb(82 82 82 / var(--tw-text-opacity, 1))}.text-neutral-700{--tw-text-opacity:1;color:rgb(64 64 64 / var(--tw-text-opacity, 1))}.text-neutral-900{--tw-text-opacity:1;color:rgb(23 23 23 / var(--tw-text-opacity, 1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-red-700:hover{--tw-border-opacity:1;border-color:rgb(185 28 28 / var(--tw-border-opacity, 1))}.hover\:bg-neutral-100:hover{--tw-bg-opacity:1;background-color:rgb(245 245 245 / var(--tw-bg-opacity, 1))}.hover\:bg-neutral-200:hover{--tw-bg-opacity:1;background-color:rgb(229 229 229 / var(--tw-bg-opacity, 1))}.hover\:bg-neutral-700:hover{--tw-bg-opacity:1;background-color:rgb(64 64 64 / var(--tw-bg-opacity, 1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28 / var(--tw-bg-opacity, 1))}.hover\:bg-red-950\/80:hover{background-color:rgb(69 10 10 / 0.8)}.hover\:text-red-200:hover{--tw-text-opacity:1;color:rgb(254 202 202 / var(--tw-text-opacity, 1))}.focus\:\!border-b:focus{border-bottom-width:1px !important}.focus\:\!border-black:focus{--tw-border-opacity:1 !important;border-color:rgb(0 0 0 / var(--tw-border-opacity, 1)) !important}.active\:bg-neutral-600:active{--tw-bg-opacity:1;background-color:rgb(82 82 82 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:w-\[245px\]{width:245px}.sm\:justify-start{justify-content:flex-start}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pl-4{padding-left:1rem}.sm\:text-\[13px\]{font-size:13px}.sm\:text-\[16\.5px\]{font-size:16.5px}.sm\:text-\[17px\]{font-size:17px}.sm\:text-\[31px\]{font-size:31px}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mt-10{margin-top:2.5rem}.mt-9{margin-top:2.25rem}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-2\.5{height:0.625rem}.h-3\.5{height:0.875rem}.w-2\.5{width:0.625rem}.w-3\.5{width:0.875rem}.w-\[210px\]{width:210px}.w-\[54px\]{width:54px}.w-full{width:100%}.max-w-\[660px\]{max-width:660px}.max-w-\[920px\]{max-width:920px}.max-w-sm{max-width:24rem}.cursor-pointer{cursor:pointer}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.whitespace-nowrap{white-space:nowrap}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.\!border-b-0{border-bottom-width:0px !important}.border-b{border-bottom-width:1px}.border-neutral-200{--tw-border-opacity:1;border-color:rgb(229 229 229 / var(--tw-border-opacity, 1))}.border-neutral-600{--tw-border-opacity:1;border-color:rgb(82 82 82 / var(--tw-border-opacity, 1))}.border-neutral-700{--tw-border-opacity:1;border-color:rgb(64 64 64 / var(--tw-border-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-neutral-100{--tw-bg-opacity:1;background-color:rgb(245 245 245 / var(--tw-bg-opacity, 1))}.bg-neutral-800{--tw-bg-opacity:1;background-color:rgb(38 38 38 / var(--tw-bg-opacity, 1))}.bg-neutral-900\/95{background-color:rgb(23 23 23 / 0.95)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-\[12\.5px\]{font-size:12.5px}.text-\[15\.5px\]{font-size:15.5px}.text-\[16px\]{font-size:16px}.text-\[28px\]{font-size:28px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.35\]{line-height:1.35}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.01em\]{letter-spacing:0.01em}.tracking-\[0\.02em\]{letter-spacing:0.02em}.tracking-wide{letter-spacing:0.025em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-neutral-100{--tw-text-opacity:1;color:rgb(245 245 245 / var(--tw-text-opacity, 1))}.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163 / var(--tw-text-opacity, 1))}.text-neutral-600{--tw-text-opacity:1;color:rgb(82 82 82 / var(--tw-text-opacity, 1))}.text-neutral-700{--tw-text-opacity:1;color:rgb(64 64 64 / var(--tw-text-opacity, 1))}.text-neutral-900{--tw-text-opacity:1;color:rgb(23 23 23 / var(--tw-text-opacity, 1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-red-700:hover{--tw-border-opacity:1;border-color:rgb(185 28 28 / var(--tw-border-opacity, 1))}.hover\:bg-neutral-100:hover{--tw-bg-opacity:1;background-color:rgb(245 245 245 / var(--tw-bg-opacity, 1))}.hover\:bg-neutral-200:hover{--tw-bg-opacity:1;background-color:rgb(229 229 229 / var(--tw-bg-opacity, 1))}.hover\:bg-neutral-700:hover{--tw-bg-opacity:1;background-color:rgb(64 64 64 / var(--tw-bg-opacity, 1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28 / var(--tw-bg-opacity, 1))}.hover\:bg-red-950\/80:hover{background-color:rgb(69 10 10 / 0.8)}.hover\:text-red-200:hover{--tw-text-opacity:1;color:rgb(254 202 202 / var(--tw-text-opacity, 1))}.focus\:\!border-b:focus{border-bottom-width:1px !important}.focus\:\!border-black:focus{--tw-border-opacity:1 !important;border-color:rgb(0 0 0 / var(--tw-border-opacity, 1)) !important}.active\:bg-neutral-600:active{--tw-bg-opacity:1;background-color:rgb(82 82 82 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:w-\[245px\]{width:245px}.sm\:justify-start{justify-content:flex-start}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pl-4{padding-left:1rem}.sm\:text-\[13px\]{font-size:13px}.sm\:text-\[16\.5px\]{font-size:16.5px}.sm\:text-\[17px\]{font-size:17px}.sm\:text-\[31px\]{font-size:31px}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mt-10{margin-top:2.5rem}.mt-9{margin-top:2.25rem}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-2\.5{height:0.625rem}.h-3\.5{height:0.875rem}.w-2\.5{width:0.625rem}.w-3\.5{width:0.875rem}.w-\[210px\]{width:210px}.w-\[54px\]{width:54px}.w-full{width:100%}.max-w-\[660px\]{max-width:660px}.max-w-\[920px\]{max-width:920px}.max-w-sm{max-width:24rem}.cursor-pointer{cursor:pointer}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.whitespace-nowrap{white-space:nowrap}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.\!border-b-0{border-bottom-width:0px !important}.border-b{border-bottom-width:1px}.border-neutral-200{--tw-border-opacity:1;border-color:rgb(229 229 229 / var(--tw-border-opacity, 1))}.border-neutral-600{--tw-border-opacity:1;border-color:rgb(82 82 82 / var(--tw-border-opacity, 1))}.border-neutral-700{--tw-border-opacity:1;border-color:rgb(64 64 64 / var(--tw-border-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-neutral-100{--tw-bg-opacity:1;background-color:rgb(245 245 245 / var(--tw-bg-opacity, 1))}.bg-neutral-800{--tw-bg-opacity:1;background-color:rgb(38 38 38 / var(--tw-bg-opacity, 1))}.bg-neutral-900\/95{background-color:rgb(23 23 23 / 0.95)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-\[12\.5px\]{font-size:12.5px}.text-\[15\.5px\]{font-size:15.5px}.text-\[16px\]{font-size:16px}.text-\[28px\]{font-size:28px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.35\]{line-height:1.35}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.01em\]{letter-spacing:0.01em}.tracking-\[0\.02em\]{letter-spacing:0.02em}.tracking-wide{letter-spacing:0.025em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-neutral-100{--tw-text-opacity:1;color:rgb(245 245 245 / var(--tw-text-opacity, 1))}.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163 / var(--tw-text-opacity, 1))}.text-neutral-600{--tw-text-opacity:1;color:rgb(82 82 82 / var(--tw-text-opacity, 1))}.text-neutral-700{--tw-text-opacity:1;color:rgb(64 64 64 / var(--tw-text-opacity, 1))}.text-neutral-900{--tw-text-opacity:1;color:rgb(23 23 23 / var(--tw-text-opacity, 1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-red-700:hover{--tw-border-opacity:1;border-color:rgb(185 28 28 / var(--tw-border-opacity, 1))}.hover\:bg-neutral-100:hover{--tw-bg-opacity:1;background-color:rgb(245 245 245 / var(--tw-bg-opacity, 1))}.hover\:bg-neutral-200:hover{--tw-bg-opacity:1;background-color:rgb(229 229 229 / var(--tw-bg-opacity, 1))}.hover\:bg-neutral-700:hover{--tw-bg-opacity:1;background-color:rgb(64 64 64 / var(--tw-bg-opacity, 1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28 / var(--tw-bg-opacity, 1))}.hover\:bg-red-950\/80:hover{background-color:rgb(69 10 10 / 0.8)}.hover\:text-red-200:hover{--tw-text-opacity:1;color:rgb(254 202 202 / var(--tw-text-opacity, 1))}.focus\:\!border-b:focus{border-bottom-width:1px !important}.focus\:\!border-black:focus{--tw-border-opacity:1 !important;border-color:rgb(0 0 0 / var(--tw-border-opacity, 1)) !important}.active\:bg-neutral-600:active{--tw-bg-opacity:1;background-color:rgb(82 82 82 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:w-\[245px\]{width:245px}.sm\:justify-start{justify-content:flex-start}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pl-4{padding-left:1rem}.sm\:text-\[13px\]{font-size:13px}.sm\:text-\[16\.5px\]{font-size:16.5px}.sm\:text-\[17px\]{font-size:17px}.sm\:text-\[31px\]{font-size:31px}}</style></head>
 <body>
@@ -282,17 +326,17 @@
             <header class="text-center mb-8">
                 <p class="text-xs font-bold uppercase tracking-[0.18em] text-neutral-500">Staff scheduling portal</p>
                 <h1 class="mt-3 text-3xl sm:text-4xl font-bold text-neutral-900">Online Staff Schedule</h1>
-                <p class="mt-3 text-neutral-600 max-w-xl mx-auto">View the latest team schedule securely from any device. Staff access requires an approved, verified account.</p>
+                <p id="landingIntro" class="mt-3 text-neutral-600 max-w-xl mx-auto">View the latest team schedule securely from any device. Staff access requires an approved, verified account.</p>
             </header>
 
             <div id="homeCard" class="portal-card p-6 sm:p-8 text-center">
-                <h2 class="text-xl font-bold text-neutral-900">Welcome</h2>
-                <p class="mt-2 text-sm text-neutral-600">Sign in to view the team schedule, or create a staff account to get started.</p>
+                <h2 id="homeWelcomeHeading" class="text-xl font-bold text-neutral-900">Welcome</h2>
+                <p id="homeWelcomeText" class="mt-2 whitespace-pre-line text-sm text-neutral-600">Sign in to view the team schedule, or create a staff account to get started.</p>
                 <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-                    <button type="button" onclick="showAuthForm('login')" class="rounded-lg bg-neutral-900 px-5 py-3 text-sm font-semibold text-white hover:bg-neutral-700">Staff / administrator sign in</button>
-                    <button type="button" onclick="showAuthForm('signup')" class="rounded-lg border border-neutral-300 px-5 py-3 text-sm font-semibold text-neutral-800 hover:bg-neutral-50">Create staff account</button>
+                    <button id="homeLoginButton" type="button" onclick="showAuthForm('login')" class="rounded-lg bg-neutral-900 px-5 py-3 text-sm font-semibold text-white hover:bg-neutral-700">Staff / administrator sign in</button>
+                    <button id="homeSignupButton" type="button" onclick="showAuthForm('signup')" class="staff-signup-entry rounded-lg border border-neutral-300 px-5 py-3 text-sm font-semibold text-neutral-800 hover:bg-neutral-50">Create staff account</button>
                 </div>
-                <p class="mt-5 text-xs text-neutral-500">Staff accounts are automatically approved after email verification. Administrator access is assigned separately.</p>
+                <p id="homeAccountNote" class="staff-signup-entry mt-5 text-xs text-neutral-500">Staff accounts are automatically approved after email verification. Administrator access is assigned separately.</p>
             </div>
 
             <div id="authCard" class="portal-card hidden max-w-md mx-auto p-6 sm:p-8">
@@ -309,7 +353,7 @@
                     </label>
                     <button type="submit" class="w-full rounded-lg bg-neutral-900 px-4 py-3 text-sm font-semibold text-white hover:bg-neutral-700">Sign in</button>
                     <div class="flex justify-between gap-3 text-sm">
-                        <button type="button" onclick="showAuthForm('signup')" class="text-blue-700 hover:underline">Create an account</button>
+                        <button id="loginSignupButton" type="button" onclick="showAuthForm('signup')" class="staff-signup-entry text-blue-700 hover:underline">Create an account</button>
                         <button type="button" onclick="showAuthForm('forgot')" class="text-blue-700 hover:underline">Forgot password?</button>
                     </div>
                 </form>
@@ -347,7 +391,89 @@
         </div>
     </section>
 
-    <div id="applicationView" class="hidden">
+    <div id="applicationView" class="hidden min-h-screen bg-slate-100 lg:pl-64">
+        <aside id="portalSidebar" class="portal-sidebar no-print relative z-30 px-4 py-4 text-white lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-64 lg:flex-col lg:overflow-y-auto">
+            <div class="flex items-center gap-3 border-b border-slate-800 px-1 pb-5">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-600 shadow-lg shadow-indigo-950/30" aria-hidden="true">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"></path>
+                    </svg>
+                </span>
+                <div>
+                    <p class="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Staff Panel</p>
+                    <h2 class="text-lg font-bold tracking-tight">Employee Portal</h2>
+                </div>
+            </div>
+            <nav aria-label="Portal sections" class="mt-4 flex flex-wrap gap-2 lg:block lg:space-y-2">
+                <button type="button" class="portal-nav-link is-active" data-portal-target="dashboard" aria-current="page">
+                    <span aria-hidden="true">▦</span> Dashboard
+                </button>
+                <button type="button" class="portal-nav-link" data-portal-target="schedule">
+                    <span aria-hidden="true">◷</span> Shift Booking
+                </button>
+                <button type="button" class="portal-nav-link" data-portal-target="onlineSchedule">
+                    <span aria-hidden="true">▤</span> Online Staff Schedule
+                </button>
+                <button type="button" class="portal-nav-link" data-portal-target="teamDirectory">
+                    <span aria-hidden="true">♧</span> Team Directory
+                </button>
+                <button id="leaveNavButton" type="button" class="portal-nav-link" data-portal-target="leave">
+                    <span aria-hidden="true">✓</span> Time Off / Leave
+                </button>
+                <button id="adminNavButton" type="button" class="portal-nav-link hidden" data-portal-target="admin">
+                    <span aria-hidden="true">⚙</span> Admin Controls
+                </button>
+                <button type="button" class="portal-nav-link" data-portal-target="account">
+                    <span aria-hidden="true">●</span> My Account
+                </button>
+            </nav>
+            <p class="mt-5 hidden border-t border-slate-800 pt-4 text-xs leading-5 text-slate-400 lg:block">Your schedule and updates are shared securely with your team.</p>
+            <button type="button" class="portal-nav-link mt-4 w-full border-t border-slate-800 pt-4 lg:mt-auto" onclick="signOut()">
+                <span aria-hidden="true">↪</span> Sign out
+            </button>
+        </aside>
+
+        <section id="dashboardOverview" class="no-print mx-auto max-w-6xl px-4 pt-6">
+            <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">Employee Portal</p>
+                    <h1 class="mt-1 text-3xl font-bold tracking-tight text-slate-900">Dashboard Overview</h1>
+                    <p id="dashboardWeekLabel" class="mt-1 text-sm text-slate-500">Weekly schedule summary</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <span id="dashboardRoleBadge" class="rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-700">Staff</span>
+                    <button id="dashboardAccountButton" type="button" class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">My account</button>
+                    <button type="button" onclick="signOut()" class="rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white hover:bg-slate-700">Sign out</button>
+                </div>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                    <p id="dashboardHoursLabel" class="text-xs font-bold uppercase tracking-wider text-slate-400">Hours this week</p>
+                    <p id="dashboardHoursValue" class="mt-3 text-3xl font-bold text-slate-900">0 hrs</p>
+                    <p id="dashboardHoursCaption" class="mt-2 text-sm text-slate-500">Your scheduled hours</p>
+                    <div class="mt-4 h-1.5 rounded-full bg-indigo-600"></div>
+                </article>
+                <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Extra / call-in</p>
+                    <p id="dashboardExtraHoursValue" class="mt-3 text-3xl font-bold text-slate-900">0 hrs</p>
+                    <p class="mt-2 text-sm text-slate-500">Marked separately on the schedule</p>
+                    <div class="mt-4 h-1.5 rounded-full bg-amber-500"></div>
+                </article>
+                <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Team members</p>
+                    <p id="dashboardTeamCount" class="mt-3 text-3xl font-bold text-slate-900">0</p>
+                    <p class="mt-2 text-sm text-slate-500">On the shared staff schedule</p>
+                    <div class="mt-4 h-1.5 rounded-full bg-violet-500"></div>
+                </article>
+                <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Scheduled shifts</p>
+                    <p id="dashboardShiftCount" class="mt-3 text-3xl font-bold text-slate-900">0</p>
+                    <p id="dashboardShiftCaption" class="mt-2 text-sm text-slate-500">Your shifts this week</p>
+                    <div class="mt-4 h-1.5 rounded-full bg-sky-500"></div>
+                </article>
+            </div>
+        </section>
+
         <section id="adminPanel" class="no-print hidden max-w-5xl mx-auto px-4 pt-5">
             <div class="portal-card p-5 sm:p-6">
                 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
@@ -356,8 +482,14 @@
                         <h2 class="mt-1 text-xl font-bold text-neutral-900">Staff access &amp; system settings</h2>
                         <p class="mt-1 text-sm text-neutral-600">Manage staff permissions, suspend access, and control maintenance mode.</p>
                     </div>
-                    <div id="adminActionStatus" role="status" class="text-sm text-neutral-500"></div>
+                    <div class="flex flex-col gap-2 sm:items-end">
+                        <button type="button" onclick="signOut()" class="w-full rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-700 sm:w-auto">Sign out</button>
+                        <div id="adminActionStatus" role="status" class="w-full text-center text-sm text-neutral-500"></div>
+                    </div>
                 </div>
+                <label class="mt-4 block max-w-xs text-sm font-medium text-neutral-700">Schedule week
+                    <input id="adminWeekInput" type="date" aria-label="Select week for admin schedule controls" class="portal-input mt-1">
+                </label>
                 <div class="mt-5 grid gap-5 md:grid-cols-2">
                     <section class="rounded-lg border border-neutral-200 p-4">
                         <h3 class="font-semibold text-neutral-900">Maintenance mode</h3>
@@ -384,7 +516,7 @@
                 </div>
                 <section class="mt-5 rounded-lg border border-neutral-200 p-4">
                     <h3 class="font-semibold text-neutral-900">Rush-hour coverage &amp; extra staff</h3>
-                    <p class="mt-1 text-sm text-neutral-600">Two staff are required by default. For business rush hours, select a time range and set the requirement to three or more staff; staff can then book the extra open hours in that period.</p>
+                    <p class="mt-1 text-sm text-neutral-600">Two staff are required by default. Set any time range to require up to eight people for busy periods. Staff can also add EXTRA / CALL-IN hours without being limited by the normal staffing target.</p>
                     <div class="mt-3 grid gap-3 sm:grid-cols-5">
                         <label class="text-sm font-medium text-neutral-700">Day
                             <select id="coverageDay" class="portal-input mt-1">
@@ -401,12 +533,33 @@
                         <label class="text-sm font-medium text-neutral-700">Staff needed in this period
                             <select id="coverageCount" class="portal-input mt-1">
                                 <option value="2">2 staff</option><option value="3">3 staff</option><option value="4">4 staff</option><option value="5">5 staff</option>
+                                <option value="6">6 staff</option><option value="7">7 staff</option><option value="8">8 staff</option>
                             </select>
                         </label>
                         <button id="saveCoverageButton" type="button" class="self-end rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-700">Save coverage</button>
                     </div>
                 </section>
             </div>
+            <section id="adminAssignmentPanel" class="no-print hidden mt-5 rounded-lg border border-neutral-300 bg-white p-4 shadow-sm">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <div>
+                        <h2 class="font-semibold text-neutral-900">Admin schedule controls</h2>
+                        <p class="mt-1 text-xs text-neutral-500">Edit or remove a staff booking, then republish the latest schedule.</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="refreshScheduleButton" type="button" class="rounded-lg border border-neutral-300 px-3 py-2 text-sm font-medium hover:bg-neutral-50">Refresh</button>
+                        <button id="republishScheduleButton" type="button" class="rounded-lg bg-neutral-900 px-3 py-2 text-sm font-semibold text-white hover:bg-neutral-700">Republish schedule</button>
+                    </div>
+                </div>
+                <label class="mt-4 block max-w-md text-sm font-medium text-neutral-700">Select staff member
+                    <select id="adminAssignmentStaffFilter" class="portal-input mt-1">
+                        <option value="">Select a staff member</option>
+                    </select>
+                </label>
+                <div id="adminAssignmentList" class="mt-4 space-y-3">
+                    <p class="text-sm text-neutral-500">Select a staff member to view their bookings and time off.</p>
+                </div>
+            </section>
         </section>
 
         <section id="accountPanel" class="no-print hidden max-w-5xl mx-auto px-4 pt-5">
@@ -418,7 +571,7 @@
                     </div>
                     <button id="closeAccountPanel" type="button" class="text-sm font-medium text-blue-700 hover:underline">Close</button>
                 </div>
-                <div id="accountStatus" role="status" class="mt-3 text-sm text-neutral-600"></div>
+                <div id="accountStatus" role="status" class="mt-3 text-center text-sm text-neutral-600"></div>
                 <div class="mt-4 grid gap-4 sm:grid-cols-3">
                     <label class="text-sm font-medium text-neutral-700">Unique username
                         <input id="accountUsername" type="text" minlength="3" maxlength="30" pattern="[A-Za-z0-9._-]+" class="portal-input mt-1">
@@ -439,12 +592,14 @@
                 <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                         <p class="text-xs font-bold uppercase tracking-wider text-neutral-500">Staff scheduling</p>
-                        <h2 class="mt-1 text-xl font-bold text-neutral-900">Book work hours or pick up extra hours</h2>
-                        <p class="mt-1 text-sm text-neutral-600">Choose an open period to add hours. If an administrator sets a rush-hour target of three or more staff, available extra places appear until that target is met. Operating hours: weekdays 10:00 am–4:00 am; weekends 11:00 am–4:00 am. Times are in 30-minute increments.</p>
+                        <h2 class="mt-1 text-xl font-bold text-neutral-900">Schedule time &amp; holidays</h2>
+                        <p class="mt-1 text-sm text-neutral-600">Choose a day and time window to add a shift. Regular bookings add available 30-minute periods under the staffing target; extra/call-in bookings add the full selected window without a team-size limit and are counted separately. Operating hours: weekdays 10:00 am–4:00 am; weekends 11:00 am–4:00 am.</p>
                     </div>
-                    <div id="bookingStatus" role="status" aria-live="polite" class="text-sm text-neutral-600"></div>
                 </div>
-                <div class="mt-4 grid gap-3 sm:grid-cols-5">
+                <div class="mt-4 grid gap-3 sm:grid-cols-6">
+                    <label class="text-sm font-medium text-neutral-700">Week of
+                        <input id="bookingWeekInput" type="date" aria-label="Select week for shift booking" class="portal-input mt-1">
+                    </label>
                     <label class="text-sm font-medium text-neutral-700">Day
                         <select id="bookingDay" class="portal-input mt-1">
                             <option value="0">Monday</option><option value="1">Tuesday</option><option value="2">Wednesday</option>
@@ -457,24 +612,60 @@
                     <label class="text-sm font-medium text-neutral-700">To
                         <select id="bookingEnd" class="portal-input mt-1"></select>
                     </label>
-                    <label class="text-sm font-medium text-neutral-700">Selection
+                    <label class="text-sm font-medium text-neutral-700">Booking type
                         <select id="bookingMode" class="portal-input mt-1">
-                            <option value="exact">Book this exact time</option>
-                            <option value="available">Add all available hours in this window</option>
-                            <option value="extra">Record extra / call-in hours</option>
+                            <option value="requested">Regular hours from remaining capacity</option>
+                            <option value="extra">Extra / call-in (no staffing cap)</option>
                         </select>
                     </label>
                     <div class="flex flex-wrap items-end gap-2">
-                        <button id="bookTimeButton" type="button" class="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-700">Add hours</button>
-                        <button id="markDayOffButton" type="button" class="rounded-lg border border-neutral-300 px-3 py-2 text-sm font-semibold text-neutral-800 hover:bg-neutral-50">Mark holiday</button>
+                        <button id="bookTimeButton" type="button" class="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-700">Add selected time</button>
                     </div>
                 </div>
-                <p class="mt-3 text-xs text-neutral-500">A successful selection is posted to the shared schedule immediately and cannot be changed by staff. Contact an administrator for corrections. A “—” means no shift or a selected holiday.</p>
-                <p class="mt-2 text-xs text-neutral-500">Fully booked periods are omitted for regular bookings. Choose “Record extra / call-in hours” when you were called in to work on top of the scheduled staff; these hours are color-coded and count toward totals.</p>
+                <p id="bookingAvailability" role="status" aria-live="polite" class="mt-3 w-full rounded-lg bg-neutral-50 px-3 py-2 text-center text-sm text-neutral-700">Choose a day and time window to check availability.</p>
+                <p id="bookingStatus" role="status" aria-live="polite" class="mt-3 w-full text-center text-sm text-neutral-600"></p>
+                <p class="mt-2 text-xs text-neutral-500">Regular bookings fill available time in the selected window, up to current staffing targets. Extra/call-in bookings add the full selected window above the target. Posted time appears on the shared schedule immediately; contact an administrator for corrections.</p>
+                <p class="mt-2 text-xs text-neutral-500">A “—” means no shift or a selected holiday. Call-in hours are marked EXTRA and included in weekly totals.</p>
             </div>
         </section>
 
-        <section id="coveragePanel" class="no-print max-w-5xl mx-auto px-4 pt-5">
+        <section id="leavePanel" class="no-print hidden max-w-5xl mx-auto px-4 pt-5">
+            <div class="portal-card p-5 sm:p-6">
+                <p class="text-xs font-bold uppercase tracking-wider text-neutral-500">Time off / leave</p>
+                <h2 class="mt-1 text-xl font-bold text-neutral-900">Select a day off</h2>
+                <p class="mt-1 text-sm text-neutral-600">Choose the schedule week and day you want off. Your request will appear on the shared schedule.</p>
+                <div class="mt-4 grid gap-3 sm:grid-cols-2 sm:items-end">
+                    <label class="text-sm font-medium text-neutral-700">Week of
+                        <input id="leaveWeekInput" type="date" aria-label="Select week for time off" class="portal-input mt-1">
+                    </label>
+                    <label class="text-sm font-medium text-neutral-700">Day off
+                        <select id="leaveDay" class="portal-input mt-1">
+                            <option value="0">Monday</option><option value="1">Tuesday</option><option value="2">Wednesday</option>
+                            <option value="3">Thursday</option><option value="4">Friday</option><option value="5">Saturday</option><option value="6">Sunday</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="mt-4 text-center">
+                    <button id="markDayOffButton" type="button" class="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-700">Submit day-off request</button>
+                </div>
+                <p id="leaveStatus" role="status" aria-live="polite" class="mt-4 w-full text-center text-sm text-neutral-600"></p>
+            </div>
+        </section>
+
+        <section id="teamDirectory" class="no-print hidden mx-auto max-w-5xl px-4 pt-5">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-indigo-600">Your team</p>
+                    <h2 class="mt-1 text-xl font-bold text-slate-900">Team Directory</h2>
+                    <p class="mt-1 text-sm text-slate-500">Staff members on this shared schedule.</p>
+                </div>
+                <div id="teamDirectoryList" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <p class="text-sm text-slate-500">Loading team members...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="coveragePanel" class="no-print hidden max-w-5xl mx-auto px-4 pt-5">
             <div class="portal-card p-5 sm:p-6">
                 <div class="flex flex-wrap items-center justify-between gap-3">
                     <div>
@@ -485,7 +676,10 @@
                         <span><i class="mr-1 inline-block h-3 w-3 rounded bg-red-500"></i>2</span>
                         <span><i class="mr-1 inline-block h-3 w-3 rounded bg-green-500"></i>3</span>
                         <span><i class="mr-1 inline-block h-3 w-3 rounded bg-purple-500"></i>4</span>
-                        <span><i class="mr-1 inline-block h-3 w-3 rounded bg-blue-500"></i>5+</span>
+                        <span><i class="mr-1 inline-block h-3 w-3 rounded bg-blue-500"></i>5</span>
+                        <span><i class="mr-1 inline-block h-3 w-3 rounded bg-indigo-500"></i>6</span>
+                        <span><i class="mr-1 inline-block h-3 w-3 rounded bg-pink-500"></i>7</span>
+                        <span><i class="mr-1 inline-block h-3 w-3 rounded bg-cyan-500"></i>8+</span>
                         <span><i class="mr-1 inline-block h-3 w-3 rounded bg-amber-400"></i>0–1 staff</span>
                     </div>
                 </div>
@@ -513,30 +707,33 @@
                 <button type="button" onclick="signOut()" class="mt-5 rounded-lg border border-neutral-300 px-4 py-2 text-sm font-semibold text-neutral-800 hover:bg-white">Sign out</button>
             </div>
         </section>
-        <div id="scheduleInterface">
-    <!-- Subtle Floating Action Toolbar (Hidden when printing) -->
-    <div class="no-print sticky top-0 z-40 bg-neutral-900/95 text-white backdrop-blur-md border-b border-neutral-700 px-4 py-2.5 shadow-md">
-        <div class="max-w-[920px] mx-auto flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center gap-2.5">
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400" id="saveStatusDot" title="Auto-saved"></span>
-                <span class="text-sm font-semibold tracking-wide">ONLINE STAFF SCHEDULE</span>
-                <span id="scheduleHint" class="hidden sm:inline text-xs text-neutral-400">| Schedule access</span>
-                <span id="saveStatusText" class="text-xs text-amber-400 font-medium ml-1">Saving...</span>
+        <div id="scheduleInterface" class="hidden">
+    <!-- Schedule actions (hidden when printing) -->
+    <div class="no-print sticky top-0 z-40 border-b border-slate-800 bg-slate-950 text-white shadow-lg">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex items-center gap-3">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-lg font-bold shadow-lg shadow-indigo-950/30" aria-hidden="true">S</span>
+                <div>
+                    <p class="text-sm font-bold uppercase tracking-[0.12em]">Online Staff Schedule</p>
+                    <p id="scheduleHint" class="mt-0.5 text-xs text-slate-400">Shared weekly team schedule</p>
+                </div>
+                <span id="saveStatusBadge" class="ml-auto inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300 lg:ml-2">
+                    <span class="inline-block h-2 w-2 rounded-full bg-emerald-400" id="saveStatusDot" title="Schedule status"></span>
+                    <span id="saveStatusText" class="text-xs font-medium">Online</span>
+                </span>
             </div>
 
-            <div class="flex flex-wrap items-center gap-2">
-                <span id="signedInEmail" class="hidden sm:inline text-xs text-neutral-300"></span>
-                <label class="flex items-center gap-2 text-xs text-neutral-300">Week of
-                    <input id="scheduleWeekInput" type="date" class="rounded-md border border-neutral-600 bg-neutral-800 px-2 py-1 text-white">
+            <div class="grid gap-3 sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center">
+                <label class="flex min-w-0 items-center justify-between gap-3 text-sm text-slate-300 sm:justify-start">Week of
+                    <input id="scheduleWeekInput" type="date" aria-label="Select week; schedule starts Monday" title="Choose any date; the schedule uses that week's Monday as day one." class="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white sm:w-auto">
                 </label>
-                <button id="accountButton" type="button" class="px-3 py-1.5 text-xs font-medium bg-neutral-800 hover:bg-neutral-700 text-neutral-100 rounded-md border border-neutral-600 transition cursor-pointer">My account</button>
-                <button type="button" onclick="signOut()" class="px-3 py-1.5 text-xs font-medium bg-neutral-800 hover:bg-neutral-700 text-neutral-100 rounded-md border border-neutral-600 transition cursor-pointer">Sign out</button>
-                <button id="printScheduleButton" type="button" onclick="window.print()" class="px-4 py-1.5 text-xs font-bold bg-white hover:bg-neutral-100 text-black rounded-md shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                <button id="printScheduleButton" type="button" onclick="window.print()" title="Choose Save as PDF in the print dialog." class="flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-bold text-slate-900 transition hover:bg-slate-100 sm:w-auto">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2m-2 0H8v4h8v-4z"></path>
                     </svg>
-                    Print / Save PDF
+                    Download / Print PDF
                 </button>
+                <a id="whatsappShareButton" href="#" aria-disabled="true" tabindex="-1" target="_blank" rel="noopener noreferrer" class="pointer-events-none flex w-full items-center justify-center rounded-lg border border-emerald-500/40 bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white opacity-50 transition hover:bg-emerald-500 sm:w-auto">Share on WhatsApp</a>
             </div>
         </div>
     </div>
@@ -561,7 +758,7 @@
             <input type="text" id="weekYear" aria-label="Year" value="2026" class="line-input w-[54px] !border-b-0 focus:!border-b focus:!border-black text-left pl-1" autocomplete="off" fdprocessedid="zw2c3">
         </section>
 
-        <!-- 3. 8-Column x 10-Row Schedule Grid Table -->
+        <!-- 3. 8-Column x 8-Row Schedule Grid Table -->
         <section class="table-scroll-wrapper">
             <table class="schedule-table" id="scheduleTable">
                 <colgroup>
@@ -588,22 +785,6 @@
                 </thead>
                 <tbody id="scheduleBody"><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="0" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 1">sample</div><div class="staff-total-badge" id="row-total-0">Total: 24 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="0" data-col="1" class="cell-editor" aria-label="Row 1, Column 2">10am to 10 pm</div></td><td><div contenteditable="true" role="textbox" data-row="0" data-col="2" class="cell-editor" aria-label="Row 1, Column 3">10 am to 10 pm</div></td><td><div contenteditable="true" role="textbox" data-row="0" data-col="3" class="cell-editor" aria-label="Row 1, Column 4">-</div></td><td><div contenteditable="true" role="textbox" data-row="0" data-col="4" class="cell-editor" aria-label="Row 1, Column 5">-</div></td><td><div contenteditable="true" role="textbox" data-row="0" data-col="5" class="cell-editor" aria-label="Row 1, Column 6">-</div></td><td><div contenteditable="true" role="textbox" data-row="0" data-col="6" class="cell-editor" aria-label="Row 1, Column 7">-</div></td><td><div contenteditable="true" role="textbox" data-row="0" data-col="7" class="cell-editor" aria-label="Row 1, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="1" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 2"></div><div class="staff-total-badge" id="row-total-1">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="1" data-col="1" class="cell-editor" aria-label="Row 2, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="1" data-col="2" class="cell-editor" aria-label="Row 2, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="1" data-col="3" class="cell-editor" aria-label="Row 2, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="1" data-col="4" class="cell-editor" aria-label="Row 2, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="1" data-col="5" class="cell-editor" aria-label="Row 2, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="1" data-col="6" class="cell-editor" aria-label="Row 2, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="1" data-col="7" class="cell-editor" aria-label="Row 2, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="2" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 3"></div><div class="staff-total-badge" id="row-total-2">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="2" data-col="1" class="cell-editor" aria-label="Row 3, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="2" data-col="2" class="cell-editor" aria-label="Row 3, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="2" data-col="3" class="cell-editor" aria-label="Row 3, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="2" data-col="4" class="cell-editor" aria-label="Row 3, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="2" data-col="5" class="cell-editor" aria-label="Row 3, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="2" data-col="6" class="cell-editor" aria-label="Row 3, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="2" data-col="7" class="cell-editor" aria-label="Row 3, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="3" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 4"></div><div class="staff-total-badge" id="row-total-3">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="3" data-col="1" class="cell-editor" aria-label="Row 4, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="3" data-col="2" class="cell-editor" aria-label="Row 4, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="3" data-col="3" class="cell-editor" aria-label="Row 4, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="3" data-col="4" class="cell-editor" aria-label="Row 4, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="3" data-col="5" class="cell-editor" aria-label="Row 4, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="3" data-col="6" class="cell-editor" aria-label="Row 4, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="3" data-col="7" class="cell-editor" aria-label="Row 4, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="4" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 5"></div><div class="staff-total-badge" id="row-total-4">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="4" data-col="1" class="cell-editor" aria-label="Row 5, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="4" data-col="2" class="cell-editor" aria-label="Row 5, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="4" data-col="3" class="cell-editor" aria-label="Row 5, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="4" data-col="4" class="cell-editor" aria-label="Row 5, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="4" data-col="5" class="cell-editor" aria-label="Row 5, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="4" data-col="6" class="cell-editor" aria-label="Row 5, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="4" data-col="7" class="cell-editor" aria-label="Row 5, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="5" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 6"></div><div class="staff-total-badge" id="row-total-5">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="5" data-col="1" class="cell-editor" aria-label="Row 6, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="5" data-col="2" class="cell-editor" aria-label="Row 6, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="5" data-col="3" class="cell-editor" aria-label="Row 6, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="5" data-col="4" class="cell-editor" aria-label="Row 6, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="5" data-col="5" class="cell-editor" aria-label="Row 6, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="5" data-col="6" class="cell-editor" aria-label="Row 6, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="5" data-col="7" class="cell-editor" aria-label="Row 6, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="6" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 7"></div><div class="staff-total-badge" id="row-total-6">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="6" data-col="1" class="cell-editor" aria-label="Row 7, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="6" data-col="2" class="cell-editor" aria-label="Row 7, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="6" data-col="3" class="cell-editor" aria-label="Row 7, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="6" data-col="4" class="cell-editor" aria-label="Row 7, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="6" data-col="5" class="cell-editor" aria-label="Row 7, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="6" data-col="6" class="cell-editor" aria-label="Row 7, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="6" data-col="7" class="cell-editor" aria-label="Row 7, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="7" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 8"></div><div class="staff-total-badge" id="row-total-7">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="7" data-col="1" class="cell-editor" aria-label="Row 8, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="7" data-col="2" class="cell-editor" aria-label="Row 8, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="7" data-col="3" class="cell-editor" aria-label="Row 8, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="7" data-col="4" class="cell-editor" aria-label="Row 8, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="7" data-col="5" class="cell-editor" aria-label="Row 8, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="7" data-col="6" class="cell-editor" aria-label="Row 8, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="7" data-col="7" class="cell-editor" aria-label="Row 8, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="8" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 9"></div><div class="staff-total-badge" id="row-total-8">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="8" data-col="1" class="cell-editor" aria-label="Row 9, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="8" data-col="2" class="cell-editor" aria-label="Row 9, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="8" data-col="3" class="cell-editor" aria-label="Row 9, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="8" data-col="4" class="cell-editor" aria-label="Row 9, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="8" data-col="5" class="cell-editor" aria-label="Row 9, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="8" data-col="6" class="cell-editor" aria-label="Row 9, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="8" data-col="7" class="cell-editor" aria-label="Row 9, Column 8"></div></td></tr><tr><td><div class="staff-cell-wrapper"><div contenteditable="true" role="textbox" data-row="9" data-col="0" class="cell-editor staff-name-editor" aria-label="Staff Name Row 10"></div><div class="staff-total-badge" id="row-total-9">Total: 0 hrs</div></div></td><td><div contenteditable="true" role="textbox" data-row="9" data-col="1" class="cell-editor" aria-label="Row 10, Column 2"></div></td><td><div contenteditable="true" role="textbox" data-row="9" data-col="2" class="cell-editor" aria-label="Row 10, Column 3"></div></td><td><div contenteditable="true" role="textbox" data-row="9" data-col="3" class="cell-editor" aria-label="Row 10, Column 4"></div></td><td><div contenteditable="true" role="textbox" data-row="9" data-col="4" class="cell-editor" aria-label="Row 10, Column 5"></div></td><td><div contenteditable="true" role="textbox" data-row="9" data-col="5" class="cell-editor" aria-label="Row 10, Column 6"></div></td><td><div contenteditable="true" role="textbox" data-row="9" data-col="6" class="cell-editor" aria-label="Row 10, Column 7"></div></td><td><div contenteditable="true" role="textbox" data-row="9" data-col="7" class="cell-editor" aria-label="Row 10, Column 8"></div></td></tr></tbody>
             </table>
-        </section>
-
-        <section id="adminAssignmentPanel" class="no-print hidden mt-6 rounded-lg border border-neutral-300 p-4">
-            <div class="flex flex-wrap items-center justify-between gap-3">
-                <div>
-                    <h2 class="font-semibold text-neutral-900">Admin schedule controls</h2>
-                    <p class="mt-1 text-xs text-neutral-500">Edit or remove a staff booking, then republish the latest schedule.</p>
-                </div>
-                <div class="flex gap-2">
-                    <button id="refreshScheduleButton" type="button" class="rounded-lg border border-neutral-300 px-3 py-2 text-sm font-medium hover:bg-neutral-50">Refresh</button>
-                    <button id="republishScheduleButton" type="button" class="rounded-lg bg-neutral-900 px-3 py-2 text-sm font-semibold text-white hover:bg-neutral-700">Republish schedule</button>
-                </div>
-            </div>
-            <div id="adminAssignmentList" class="mt-4 space-y-3">
-                <p class="text-sm text-neutral-500">Loading schedule assignments...</p>
-            </div>
         </section>
 
         <!-- 4. Exact Footer Notes Matching the Image -->
@@ -640,7 +821,7 @@
     </div>
 
     <script>
-        const DEFAULT_ROWS = 10; // 10 staff rows as requested
+        const DEFAULT_ROWS = 8;
         const COLS = 8;
 
         let scheduleState = {
@@ -872,10 +1053,12 @@
         // Cloud persistence is configured after Supabase authentication.
         function triggerAutoSave() {
             const statusText = document.getElementById('saveStatusText');
-            if (statusText) {
-                statusText.textContent = 'Online connection required';
-                statusText.className = 'text-xs text-red-400 font-medium ml-1';
-            }
+            const statusDot = document.getElementById('saveStatusDot');
+            const statusBadge = document.getElementById('saveStatusBadge');
+            if (!statusText || !statusDot || !statusBadge) return;
+            statusText.textContent = 'Online connection required';
+            statusBadge.className = 'ml-auto inline-flex items-center gap-2 rounded-full border border-red-400/20 bg-red-400/10 px-3 py-1 text-xs font-medium text-red-300 lg:ml-2';
+            statusDot.className = 'inline-block h-2 w-2 rounded-full bg-red-400';
         }
 
         // Add an extra staff row
@@ -967,6 +1150,8 @@
            let client = null;
            let currentUser = null;
            let currentProfile = null;
+           let maintenanceEnabled = false;
+           let activeMaintenanceMessage = DEFAULT_MAINTENANCE_MESSAGE;
            let isAdmin = false;
            let canPrint = false;
            let hasLoadedSchedule = false;
@@ -974,11 +1159,19 @@
            let routeInProgress = '';
            let scheduleData = { staff: [], assignments: [], day_offs: [], coverage: [] };
            let activeWeekStart = '';
+           let activePortalView = 'dashboard';
+           let previousPortalView = 'dashboard';
+           let portalAccessBlocked = false;
+           let adminAssignmentStaffId = '';
+           let pdfLibraryPromise = null;
+           let autoDownloadInProgress = false;
+           let autoDownloadError = false;
+           let lastAutoDownloadAttempt = { key: '', at: 0 };
 
            function setAuthMessage(message, type) {
                const element = document.getElementById('authMessage');
                element.textContent = message;
-               element.className = `mt-4 rounded-lg p-3 text-sm ${type === 'error' ? 'bg-red-50 text-red-800' : 'bg-blue-50 text-blue-800'}`;
+               element.className = `mt-4 whitespace-pre-line rounded-lg p-3 text-center text-sm ${type === 'error' ? 'bg-red-50 text-red-800' : 'bg-blue-50 text-blue-800'}`;
            }
 
            function clearAuthMessage() {
@@ -988,6 +1181,8 @@
            }
 
            function showAuthForm(mode) {
+               const blockedSignup = mode === 'signup' && maintenanceEnabled;
+               if (blockedSignup) mode = 'login';
                document.getElementById('homeCard').classList.add('hidden');
                document.getElementById('authCard').classList.remove('hidden');
                authForms.forEach((id) => document.getElementById(id).classList.toggle('hidden', id !== `${mode}Form`));
@@ -999,7 +1194,12 @@
                    recovery: ['Choose a new password', 'Set a new password for your account.']
                };
                document.getElementById('authHeading').textContent = titles[mode][0];
-               document.getElementById('authDescription').textContent = titles[mode][1];
+               document.getElementById('authDescription').textContent = maintenanceEnabled && mode === 'login'
+                   ? 'Administrator sign-in is available while staff access is paused for maintenance.'
+                   : titles[mode][1];
+               if (blockedSignup) {
+                   setAuthMessage('Staff registration is unavailable during maintenance. Administrator sign-in remains available.', 'error');
+               }
            }
 
            function showHome() {
@@ -1008,27 +1208,117 @@
                clearAuthMessage();
            }
 
+           function applyMaintenanceSettings(settings) {
+               maintenanceEnabled = settings?.maintenance_enabled === true;
+               activeMaintenanceMessage = settings?.maintenance_message?.trim() || DEFAULT_MAINTENANCE_MESSAGE;
+               document.getElementById('landingIntro').textContent = maintenanceEnabled
+                   ? 'The scheduling portal is temporarily under maintenance. Administrator access remains available.'
+                   : 'View the latest team schedule securely from any device. Staff access requires an approved, verified account.';
+               document.getElementById('homeWelcomeHeading').textContent = maintenanceEnabled ? 'Scheduled maintenance' : 'Welcome';
+               document.getElementById('homeWelcomeText').textContent = maintenanceEnabled
+                   ? `${activeMaintenanceMessage}\n\nStaff access is unavailable during maintenance. Administrators may sign in to manage the system.`
+                   : 'Sign in to view the team schedule, or create a staff account to get started.';
+               document.getElementById('homeLoginButton').textContent = maintenanceEnabled
+                   ? 'Administrator sign in'
+                   : 'Staff / administrator sign in';
+               document.querySelectorAll('.staff-signup-entry').forEach((element) => {
+                   element.classList.toggle('hidden', maintenanceEnabled);
+               });
+               if (maintenanceEnabled && !document.getElementById('signupForm').classList.contains('hidden')) {
+                   showAuthForm('login');
+                   setAuthMessage('Staff registration is unavailable during maintenance. Administrator sign-in remains available.', 'error');
+               }
+           }
+
            window.showAuthForm = showAuthForm;
            window.showHome = showHome;
 
            function setSaveStatus(text, state) {
                const statusText = document.getElementById('saveStatusText');
                const statusDot = document.getElementById('saveStatusDot');
-               if (!statusText || !statusDot) return;
+               const statusBadge = document.getElementById('saveStatusBadge');
+               if (!statusText || !statusDot || !statusBadge) return;
                statusText.textContent = text;
-               const classes = state === 'error'
-                   ? ['text-xs text-red-400 font-medium ml-1', 'inline-block w-2.5 h-2.5 rounded-full bg-red-400']
+               const badgeTone = state === 'error'
+                   ? 'border-red-400/20 bg-red-400/10 text-red-300'
                    : state === 'saving'
-                       ? ['text-xs text-amber-400 font-medium ml-1', 'inline-block w-2.5 h-2.5 rounded-full bg-amber-400']
-                       : ['text-xs text-emerald-400 font-medium ml-1', 'inline-block w-2.5 h-2.5 rounded-full bg-emerald-400'];
-               statusText.className = classes[0];
-               statusDot.className = classes[1];
+                       ? 'border-amber-400/20 bg-amber-400/10 text-amber-300'
+                       : 'border-emerald-400/20 bg-emerald-400/10 text-emerald-300';
+               const dotTone = state === 'error'
+                   ? 'bg-red-400'
+                   : state === 'saving'
+                       ? 'bg-amber-400'
+                       : 'bg-emerald-400';
+               statusBadge.className = `ml-auto inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium lg:ml-2 ${badgeTone}`;
+               statusDot.className = `inline-block h-2 w-2 rounded-full ${dotTone}`;
            }
 
            function setAdminStatus(message, isError) {
                const status = document.getElementById('adminActionStatus');
                status.textContent = message;
-               status.className = `text-sm ${isError ? 'text-red-700' : 'text-neutral-500'}`;
+               status.className = `w-full text-center text-sm ${isError ? 'text-red-700' : 'text-neutral-500'}`;
+           }
+
+           function navigatePortal(target) {
+               if (portalAccessBlocked) return;
+
+               const canViewSchedule = isAdmin || currentProfile?.permissions?.view_schedule === true;
+               const canBookSchedule = !isAdmin && currentProfile?.permissions?.book_schedule === true;
+               const views = {
+                   dashboard: ['dashboardOverview'],
+                   schedule: ['bookingPanel', 'coveragePanel'],
+                   onlineSchedule: ['scheduleInterface'],
+                   teamDirectory: ['teamDirectory'],
+                   leave: ['leavePanel'],
+                   admin: ['adminPanel', 'adminAssignmentPanel'],
+                   account: ['accountPanel']
+               };
+               if (!Object.prototype.hasOwnProperty.call(views, target)) return;
+               if (target === 'schedule' && !canViewSchedule) return;
+               if (target === 'onlineSchedule' && !canViewSchedule) return;
+               if (target === 'teamDirectory' && !canViewSchedule) return;
+               if (target === 'leave' && !canBookSchedule) return;
+               if (target === 'admin' && !isAdmin) return;
+
+               if (target === 'account' && activePortalView !== 'account') {
+                   previousPortalView = activePortalView;
+               }
+               const visibleSections = views[target];
+               const sectionPermissions = {
+                   bookingPanel: canBookSchedule,
+                   leavePanel: canBookSchedule,
+                   teamDirectory: canViewSchedule,
+                   coveragePanel: canViewSchedule,
+                   scheduleInterface: canViewSchedule,
+                   adminPanel: isAdmin,
+                   adminAssignmentPanel: isAdmin
+               };
+               const allSectionIds = [
+                   'dashboardOverview', 'adminPanel', 'adminAssignmentPanel', 'accountPanel',
+                   'bookingPanel', 'leavePanel', 'teamDirectory', 'coveragePanel', 'scheduleInterface'
+               ];
+               allSectionIds.forEach((sectionId) => {
+                   const permitted = !Object.prototype.hasOwnProperty.call(sectionPermissions, sectionId)
+                       || sectionPermissions[sectionId];
+                   document.getElementById(sectionId).classList.toggle(
+                       'hidden',
+                       !visibleSections.includes(sectionId) || !permitted
+                   );
+               });
+               activePortalView = target;
+               document.querySelectorAll('.portal-nav-link').forEach((button) => {
+                   const isActive = button.dataset.portalTarget === target;
+                   button.classList.toggle('is-active', isActive);
+                   if (isActive) button.setAttribute('aria-current', 'page');
+                   else button.removeAttribute('aria-current');
+               });
+               const firstVisibleSection = visibleSections.find((sectionId) => {
+                   const section = document.getElementById(sectionId);
+                   return section && !section.classList.contains('hidden');
+               });
+               if (firstVisibleSection) {
+                   document.getElementById(firstVisibleSection).scrollIntoView({ behavior: 'smooth', block: 'start' });
+               }
            }
 
            function showApplicationView() {
@@ -1044,6 +1334,21 @@
                    ? 'Your staff access has been suspended by a system administrator. Please contact an administrator if you believe this is an error.'
                    : 'Your account has been suspended by a system administrator. Please contact an administrator for assistance.';
                setAuthMessage(message, 'error');
+           }
+
+           function showMaintenanceAccessMessage() {
+               currentUser = null;
+               currentProfile = null;
+               isAdmin = false;
+               hasLoadedSchedule = false;
+               portalAccessBlocked = true;
+               document.getElementById('applicationView').classList.add('hidden');
+               document.getElementById('landingView').classList.remove('hidden');
+               showAuthForm('login');
+               setAuthMessage(
+                   `${activeMaintenanceMessage}\n\nStaff sign-in is disabled during maintenance. Administrator access remains available.`,
+                   'error'
+               );
            }
 
            function formatClockMinute(minute) {
@@ -1082,32 +1387,125 @@
                    const hours = document.createElement('span');
                    hours.textContent = `${formatClockMinute(bounds.start)}–4:00 AM`;
                    header.append(label, hours);
+                   const scroll = document.createElement('div');
+                   scroll.className = 'max-w-full overflow-x-auto';
                    const strip = document.createElement('div');
-                   strip.className = 'flex min-w-[720px] gap-px overflow-x-auto';
+                   strip.className = 'flex min-w-[720px] gap-px';
                    const dayCoverage = scheduleData.coverage.filter((slot) => Number(slot.day_index) === day);
                    for (let start = bounds.start; start < bounds.end; start += 30) {
                        const slot = dayCoverage.find((item) => Number(item.slot_start) === start) || {};
                        const count = Number(slot.assigned_count || 0);
                        const target = Number(slot.required_count || 2);
-                       const color = count < 2 ? 'bg-amber-400' : count === 2 ? 'bg-red-500' : count === 3 ? 'bg-green-500' : count === 4 ? 'bg-purple-500' : 'bg-blue-500';
+                       const color = count < 2 ? 'bg-amber-400' : count === 2 ? 'bg-red-500' : count === 3 ? 'bg-green-500' : count === 4 ? 'bg-purple-500' : count === 5 ? 'bg-blue-500' : count === 6 ? 'bg-indigo-500' : count === 7 ? 'bg-pink-500' : 'bg-cyan-500';
                        const tile = document.createElement('span');
                        tile.className = `h-5 min-w-4 flex-1 ${color} ${count < target ? 'ring-2 ring-amber-900 ring-inset' : ''}`;
                        tile.title = `${formatClockMinute(start)}–${formatClockMinute(start + 30)}: ${count} assigned / ${target} needed`;
                        strip.appendChild(tile);
                    }
-                   row.append(header, strip);
+                   scroll.appendChild(strip);
+                   row.append(header, scroll);
                    container.appendChild(row);
                }
            }
 
-           function renderAdminAssignments() {
-               const list = document.getElementById('adminAssignmentList');
-               list.replaceChildren();
-               if (!scheduleData.assignments.length && !(scheduleData.day_offs || []).length) {
-                   list.textContent = 'No staff have booked time for this week.';
+           function renderPortalDashboard() {
+               const assignments = Array.isArray(scheduleData.assignments) ? scheduleData.assignments : [];
+               const relevantAssignments = isAdmin
+                   ? assignments
+                   : assignments.filter((item) => item.user_id === currentUser.id);
+               const totalMinutes = relevantAssignments.reduce(
+                   (sum, item) => sum + Number(item.end_minute) - Number(item.start_minute), 0);
+               const extraMinutes = relevantAssignments
+                   .filter((item) => item.is_extra === true)
+                   .reduce((sum, item) => sum + Number(item.end_minute) - Number(item.start_minute), 0);
+               const hoursText = (minutes) => {
+                   const hours = (minutes / 60).toFixed(1);
+                   return `${hours.replace(/\.0$/, '')} hrs`;
+               };
+               const weekStart = new Date(`${activeWeekStart}T12:00:00`);
+               const weekEnd = new Date(weekStart);
+               weekEnd.setDate(weekEnd.getDate() + 6);
+               document.getElementById('dashboardRoleBadge').textContent = isAdmin ? 'Administrator' : 'Staff';
+               document.getElementById('dashboardHoursLabel').textContent = isAdmin ? 'Team hours this week' : 'Hours this week';
+               document.getElementById('dashboardHoursValue').textContent = hoursText(totalMinutes);
+               document.getElementById('dashboardHoursCaption').textContent = isAdmin
+                   ? 'Combined hours for scheduled staff'
+                   : 'Your scheduled hours';
+               document.getElementById('dashboardExtraHoursValue').textContent = hoursText(extraMinutes);
+               document.getElementById('dashboardTeamCount').textContent = String(
+                   Array.isArray(scheduleData.staff) ? scheduleData.staff.length : 0);
+               document.getElementById('dashboardShiftCount').textContent = String(relevantAssignments.length);
+               document.getElementById('dashboardShiftCaption').textContent = isAdmin
+                   ? 'Staff assignments this week'
+                   : 'Your shifts this week';
+               document.getElementById('dashboardWeekLabel').textContent =
+                   `Schedule week: ${weekStart.toLocaleDateString()} – ${weekEnd.toLocaleDateString()}`;
+           }
+
+           function renderTeamDirectory() {
+               const container = document.getElementById('teamDirectoryList');
+               container.replaceChildren();
+               const staff = Array.isArray(scheduleData.staff) ? scheduleData.staff : [];
+               if (!staff.length) {
+                   container.textContent = 'No staff profiles are available for this schedule.';
                    return;
                }
-               scheduleData.assignments.forEach((assignment) => {
+               staff.forEach((person) => {
+                   const name = person.display_name || person.username || 'Staff';
+                   const card = document.createElement('article');
+                   card.className = 'flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3';
+                   const avatar = document.createElement('span');
+                   avatar.className = 'flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 font-bold text-indigo-700';
+                   avatar.textContent = name.trim().charAt(0).toUpperCase() || 'S';
+                   const details = document.createElement('div');
+                   const personName = document.createElement('p');
+                   personName.className = 'font-semibold text-slate-900';
+                   personName.textContent = name;
+                   const username = document.createElement('p');
+                   username.className = 'text-sm text-slate-500';
+                   username.textContent = person.username ? `@${person.username}` : 'Staff member';
+                   details.append(personName, username);
+                   card.append(avatar, details);
+                   container.appendChild(card);
+               });
+           }
+
+           function renderAdminAssignments() {
+               const list = document.getElementById('adminAssignmentList');
+               const staffFilter = document.getElementById('adminAssignmentStaffFilter');
+               const staff = Array.isArray(scheduleData.staff) ? scheduleData.staff : [];
+               staffFilter.replaceChildren();
+               const placeholder = document.createElement('option');
+               placeholder.value = '';
+               placeholder.textContent = staff.length ? 'Select a staff member' : 'No staff available';
+               staffFilter.appendChild(placeholder);
+               staff.forEach((person) => {
+                   const option = document.createElement('option');
+                   option.value = person.id;
+                   option.textContent = person.display_name || person.username || 'Staff member';
+                   staffFilter.appendChild(option);
+               });
+               if (!staff.some((person) => person.id === adminAssignmentStaffId)) {
+                   adminAssignmentStaffId = '';
+               }
+               staffFilter.value = adminAssignmentStaffId;
+               list.replaceChildren();
+               if (!adminAssignmentStaffId) {
+                   list.textContent = staff.length
+                       ? 'Select a staff member to view their bookings and time off.'
+                       : 'No staff members are available for this week.';
+                   return;
+               }
+               const assignments = (scheduleData.assignments || []).filter(
+                   (assignment) => assignment.user_id === adminAssignmentStaffId);
+               const dayOffs = (scheduleData.day_offs || []).filter(
+                   (dayOff) => dayOff.user_id === adminAssignmentStaffId);
+               const selectedStaff = staff.find((person) => person.id === adminAssignmentStaffId);
+               if (!assignments.length && !dayOffs.length) {
+                   list.textContent = `No bookings or time-off entries for ${selectedStaff?.display_name || selectedStaff?.username || 'this staff member'} this week.`;
+                   return;
+               }
+               assignments.forEach((assignment) => {
                    const row = document.createElement('div');
                    row.className = 'grid gap-2 rounded-lg border border-neutral-200 p-3 sm:grid-cols-[1fr_auto_auto_auto_auto] sm:items-center';
                    const label = document.createElement('span');
@@ -1147,13 +1545,12 @@
                    row.append(label, from, to, extraLabel, actions);
                    list.appendChild(row);
                });
-               (scheduleData.day_offs || []).forEach((dayOff) => {
+               dayOffs.forEach((dayOff) => {
                    const row = document.createElement('div');
                    row.className = 'flex flex-wrap items-center justify-between gap-2 rounded-lg border border-neutral-200 p-3';
-                   const person = scheduleData.staff.find((staff) => staff.id === dayOff.user_id);
                    const label = document.createElement('span');
                    label.className = 'text-sm font-medium text-neutral-800';
-                   label.textContent = `${person ? person.display_name || person.username : 'Staff'} · ${DAY_NAMES[dayOff.day_index]} · Holiday`;
+                   label.textContent = `${selectedStaff?.display_name || selectedStaff?.username || 'Staff'} · ${DAY_NAMES[dayOff.day_index]} · Holiday`;
                    const button = document.createElement('button');
                    button.type = 'button';
                    button.className = 'rounded-lg border border-neutral-300 px-3 py-2 text-sm hover:bg-neutral-50';
@@ -1169,6 +1566,7 @@
                const slots = scheduleData.coverage.filter((slot) => Number(slot.day_index) === Number(dayIndex));
                const startSelect = document.getElementById('bookingStart');
                const endSelect = document.getElementById('bookingEnd');
+               const availabilityStatus = document.getElementById('bookingAvailability');
                startSelect.replaceChildren();
                endSelect.replaceChildren();
                const available = (minute) => {
@@ -1186,12 +1584,59 @@
                    });
                };
                const bookingMode = document.getElementById('bookingMode');
+               const refreshAvailability = () => {
+                   const startMinute = startSelect.value ? toOperatingMinute(startSelect.value, Number(dayIndex)) : null;
+                   const endMinute = endSelect.value ? toOperatingMinute(endSelect.value, Number(dayIndex)) : null;
+                   if (isHoliday) {
+                       availabilityStatus.textContent = 'A holiday is selected for this day. Choose another day or ask an administrator to remove the holiday.';
+                       availabilityStatus.className = 'mt-3 w-full rounded-lg bg-amber-50 px-3 py-2 text-center text-sm text-amber-900';
+                       return;
+                   }
+                   if (startMinute === null || endMinute === null || endMinute <= startMinute) {
+                       availabilityStatus.textContent = 'Choose a start and end time to check how many hours are available.';
+                       availabilityStatus.className = 'mt-3 w-full rounded-lg bg-neutral-50 px-3 py-2 text-center text-sm text-neutral-700';
+                       return;
+                   }
+
+                   let availableSlots = 0;
+                   for (let minute = startMinute; minute < endMinute; minute += 30) {
+                       const coverageSlot = slots.find((item) => Number(item.slot_start) === minute);
+                       const assignedCount = Number(coverageSlot ? coverageSlot.assigned_count : 0);
+                       const requiredCount = Number(coverageSlot ? coverageSlot.required_count : 2);
+                       const alreadyBooked = (scheduleData.assignments || []).some((item) =>
+                           item.user_id === currentUser.id && Number(item.day_index) === Number(dayIndex)
+                           && Number(item.start_minute) < minute + 30 && Number(item.end_minute) > minute);
+                       if (!alreadyBooked && (bookingMode.value === 'extra' || assignedCount < requiredCount)) {
+                           availableSlots += 1;
+                       }
+                   }
+
+                   const availableHours = availableSlots / 2;
+                   const windowHours = (endMinute - startMinute) / 60;
+                   let message = `${availableHours} of ${windowHours} hours are available in this window`;
+                   let stateClass = 'bg-neutral-50 text-neutral-700';
+                   if (bookingMode.value === 'extra') {
+                       message += ' for an extra/call-in shift.';
+                       if (availableSlots === (endMinute - startMinute) / 30) {
+                           message += ' The full window is free for you.';
+                           stateClass = 'bg-green-50 text-green-800';
+                       } else {
+                           message += ' Your existing schedule overlaps this window; choose another time.';
+                           stateClass = 'bg-amber-50 text-amber-900';
+                       }
+                   } else {
+                       message += ' under current staffing targets (two staff by default).';
+                       message += ' Adding this time will fill the available periods in the window.';
+                   }
+                   availabilityStatus.textContent = message;
+                   availabilityStatus.className = `mt-3 w-full rounded-lg px-3 py-2 text-center text-sm ${stateClass}`;
+               };
                const refreshStarts = () => {
                    const previousStart = startSelect.value;
                    startSelect.replaceChildren();
                    const startOptions = [];
                    for (let minute = start; minute < end; minute += 30) {
-                       if (!isHoliday && (bookingMode.value === 'available' || bookingMode.value === 'extra' || available(minute))) startOptions.push(minute);
+                       if (!isHoliday && (bookingMode.value === 'extra' || available(minute))) startOptions.push(minute);
                    }
                    appendOptions(startSelect, startOptions);
                    if (startOptions.length === 0) {
@@ -1202,44 +1647,247 @@
                        setBookingStatus(isHoliday ? 'A holiday is selected for this day.' : 'No time is left for you on this day.', true);
                    } else if (startOptions.some((minute) => toClockValue(minute) === previousStart)) {
                        startSelect.value = previousStart;
+                       setBookingStatus('', false);
+                   } else {
+                       setBookingStatus('', false);
                    }
                    refreshEnds();
                };
                const refreshEnds = () => {
                    const startMinute = startSelect.value ? toOperatingMinute(startSelect.value, Number(dayIndex)) : null;
                    endSelect.replaceChildren();
-                   if (startMinute === null) return;
+                   if (startMinute === null) {
+                       refreshAvailability();
+                       return;
+                   }
                    const endOptions = [];
                    for (let minute = startMinute + 30; minute <= end; minute += 30) {
-                       if (bookingMode.value === 'exact' && !available(minute - 30)) break;
                        endOptions.push(minute);
                    }
                    appendOptions(endSelect, endOptions);
+                   if (endOptions.length) {
+                       const preferredEnd = Math.min(startMinute + 120, end);
+                       endSelect.value = toClockValue(preferredEnd);
+                   }
                    if (endOptions.length === 0) {
                        const option = document.createElement('option');
                        option.value = '';
                        option.textContent = 'No time left for you';
                        endSelect.appendChild(option);
                    }
+                   refreshAvailability();
                };
                startSelect.onchange = refreshEnds;
-               bookingMode.onchange = refreshStarts;
+               endSelect.onchange = () => {
+                   refreshAvailability();
+               };
+               bookingMode.onchange = () => {
+                   refreshStarts();
+                   setBookingStatus('', false);
+               };
                refreshStarts();
+           }
+
+           function buildWhatsAppScheduleText() {
+               const weekStart = new Date(`${activeWeekStart}T12:00:00`);
+               const weekEnd = new Date(weekStart);
+               weekEnd.setDate(weekEnd.getDate() + 6);
+               const lines = [
+                   `Weekly staff schedule: ${weekStart.toLocaleDateString()}–${weekEnd.toLocaleDateString()}`
+               ];
+               (scheduleData.staff || []).forEach((person) => {
+                   const days = DAY_NAMES.map((dayName, dayIndex) => {
+                       const dayOff = (scheduleData.day_offs || []).some((item) =>
+                           item.user_id === person.id && Number(item.day_index) === dayIndex);
+                       if (dayOff) return `${dayName.slice(0, 3)}: Holiday`;
+                       const shifts = (scheduleData.assignments || [])
+                           .filter((item) => item.user_id === person.id && Number(item.day_index) === dayIndex)
+                           .sort((a, b) => a.start_minute - b.start_minute);
+                       if (!shifts.length) return `${dayName.slice(0, 3)}: —`;
+                       return `${dayName.slice(0, 3)}: ${shifts.map((item) =>
+                           `${formatClockMinute(item.start_minute)}–${formatClockMinute(item.end_minute)}${item.is_extra ? ' (EXTRA)' : ''}`
+                       ).join(', ')}`;
+                   });
+                   lines.push(`${person.display_name || person.username}: ${days.join(' | ')}`);
+               });
+               lines.push('', `Online schedule: ${window.location.origin}${window.location.pathname}`);
+               return lines.join('\n');
+           }
+
+           function updatePrintableWeekRange(weekStart) {
+               const startDate = new Date(`${weekStart}T12:00:00`);
+               const endDate = new Date(startDate);
+               endDate.setDate(endDate.getDate() + 6);
+               document.getElementById('weekStart').value = startDate.toLocaleDateString();
+               document.getElementById('weekEnd').value = endDate.toLocaleDateString();
+               document.getElementById('weekYear').value = weekStart.slice(0, 4);
+           }
+
+           function shiftWeekStart(weekStart, days) {
+               const date = new Date(`${weekStart}T12:00:00`);
+               date.setDate(date.getDate() + days);
+               return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+           }
+
+           function getCurrentWeekStart() {
+               const today = new Date();
+               today.setHours(12, 0, 0, 0);
+               today.setDate(today.getDate() - ((today.getDay() + 6) % 7));
+               return `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+           }
+
+           function loadPdfLibrary() {
+               if (typeof window.html2pdf === 'function') return Promise.resolve();
+               if (pdfLibraryPromise) return pdfLibraryPromise;
+               pdfLibraryPromise = new Promise((resolve, reject) => {
+                   const script = document.createElement('script');
+                   script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+                   script.onload = () => typeof window.html2pdf === 'function'
+                       ? resolve()
+                       : reject(new Error('The PDF generator did not initialize.'));
+                   script.onerror = () => reject(new Error('The PDF generator could not be loaded.'));
+                   document.head.appendChild(script);
+               }).catch((error) => {
+                   pdfLibraryPromise = null;
+                   throw error;
+               });
+               return pdfLibraryPromise;
+           }
+
+           function buildCompletedWeekSheet(weekStart, data) {
+               const sheet = document.getElementById('scheduleSheet').cloneNode(true);
+               const startDate = new Date(`${weekStart}T12:00:00`);
+               const endDate = new Date(startDate);
+               endDate.setDate(endDate.getDate() + 6);
+               const dateValues = [
+                   ['weekStart', startDate.toLocaleDateString()],
+                   ['weekEnd', endDate.toLocaleDateString()],
+                   ['weekYear', weekStart.slice(0, 4)]
+               ];
+               dateValues.forEach(([id, value]) => {
+                   const input = sheet.querySelector(`#${id}`);
+                   const label = document.createElement('span');
+                   label.className = input.className;
+                   label.textContent = value;
+                   input.replaceWith(label);
+               });
+
+               const staff = Array.isArray(data.staff) ? data.staff : [];
+               const assignments = Array.isArray(data.assignments) ? data.assignments : [];
+               const tbody = sheet.querySelector('#scheduleBody');
+               tbody.replaceChildren();
+               for (let rowIndex = 0; rowIndex < Math.max(DEFAULT_ROWS, staff.length); rowIndex++) {
+                   const person = staff[rowIndex];
+                   const personAssignments = person
+                       ? assignments.filter((item) => item.user_id === person.id)
+                       : [];
+                   const row = document.createElement('tr');
+                   const nameCell = document.createElement('td');
+                   const nameWrapper = document.createElement('div');
+                   nameWrapper.className = 'staff-cell-wrapper';
+                   const name = document.createElement('div');
+                   name.className = 'cell-editor staff-name-editor';
+                   name.textContent = person ? person.display_name || person.username || 'Staff' : '';
+                   const totalBadge = document.createElement('div');
+                   totalBadge.className = 'staff-total-badge';
+                   const totalMinutes = personAssignments.reduce(
+                       (sum, item) => sum + Number(item.end_minute) - Number(item.start_minute), 0);
+                   const includesExtra = personAssignments.some((item) => item.is_extra === true);
+                   totalBadge.textContent = `Total: ${(totalMinutes / 60).toFixed(1).replace(/\.0$/, '')} hrs${includesExtra ? ' (includes extra)' : ''}`;
+                   nameWrapper.append(name, totalBadge);
+                   nameCell.appendChild(nameWrapper);
+                   row.appendChild(nameCell);
+
+                   for (let day = 0; day < 7; day++) {
+                       const cell = document.createElement('td');
+                       const editor = document.createElement('div');
+                       editor.className = 'cell-editor';
+                       const shifts = personAssignments
+                           .filter((item) => Number(item.day_index) === day)
+                           .sort((left, right) => Number(left.start_minute) - Number(right.start_minute));
+                       editor.textContent = shifts.length
+                           ? shifts.map((item) => `${formatClockMinute(item.start_minute)} - ${formatClockMinute(item.end_minute)}${item.is_extra ? ' (EXTRA)' : ''}`).join('\n')
+                           : '—';
+                       if (shifts.some((item) => item.is_extra === true)) editor.classList.add('extra-shift-editor');
+                       cell.appendChild(editor);
+                       row.appendChild(cell);
+                   }
+                   tbody.appendChild(row);
+               }
+
+               sheet.querySelectorAll('[id]').forEach((element) => element.removeAttribute('id'));
+               sheet.style.position = 'fixed';
+               sheet.style.left = '-10000px';
+               sheet.style.top = '0';
+               sheet.style.width = '920px';
+               sheet.style.maxWidth = 'none';
+               sheet.style.minHeight = '0';
+               sheet.style.margin = '0';
+               sheet.style.padding = '16px 12px';
+               sheet.style.boxShadow = 'none';
+               return sheet;
+           }
+
+           async function downloadCompletedWeek(weekStart) {
+               await loadPdfLibrary();
+               const { data, error } = await client.rpc('get_week_schedule', { p_week_start: weekStart });
+               if (error) throw error;
+               const sheet = buildCompletedWeekSheet(weekStart, data || {});
+               document.body.appendChild(sheet);
+               try {
+                   await window.html2pdf().set({
+                       margin: [0.35, 0.35, 0.35, 0.35],
+                       filename: `staff-schedule-week-${weekStart}.pdf`,
+                       image: { type: 'jpeg', quality: 0.98 },
+                       html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', windowWidth: 1200 },
+                       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+                       pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                   }).from(sheet).save();
+               } finally {
+                   sheet.remove();
+               }
+           }
+
+           async function autoDownloadCompletedWeek() {
+               if (!currentUser || !isAdmin || autoDownloadInProgress) return;
+               const weekStart = shiftWeekStart(getCurrentWeekStart(), -7);
+               const key = `weekly-schedule-pdf:${currentUser.id}:${weekStart}`;
+               const now = Date.now();
+               try {
+                   if (lastAutoDownloadAttempt.key === key && now - lastAutoDownloadAttempt.at < 300000) return;
+                   lastAutoDownloadAttempt = { key, at: now };
+                   if (localStorage.getItem(key)) return;
+                   autoDownloadInProgress = true;
+                   await downloadCompletedWeek(weekStart);
+                   localStorage.setItem(key, 'downloaded');
+                   autoDownloadError = false;
+                   setSaveStatus('Previous week PDF download requested', 'saved');
+               } catch (error) {
+                   console.error('Automatic previous-week PDF download failed:', error);
+                   autoDownloadError = true;
+                   setSaveStatus('Previous week PDF download failed', 'error');
+               } finally {
+                   autoDownloadInProgress = false;
+               }
            }
 
            async function loadScheduleFromCloud() {
                if (!currentUser || (!isAdmin && !currentProfile.permissions?.view_schedule)) return;
                if (!hasLoadedSchedule) setSaveStatus('Loading...', 'saving');
+               updatePrintableWeekRange(activeWeekStart);
                const { data, error } = await client.rpc('get_week_schedule', { p_week_start: activeWeekStart });
                if (error) throw error;
                scheduleData = data || { staff: [], assignments: [], day_offs: [], coverage: [] };
+               const whatsappButton = document.getElementById('whatsappShareButton');
+               whatsappButton.href = `https://wa.me/?text=${encodeURIComponent(buildWhatsAppScheduleText())}`;
+               whatsappButton.removeAttribute('aria-disabled');
+               whatsappButton.removeAttribute('tabindex');
+               whatsappButton.classList.remove('pointer-events-none', 'opacity-50');
                const staff = Array.isArray(scheduleData.staff) ? scheduleData.staff : [];
                const assignments = Array.isArray(scheduleData.assignments) ? scheduleData.assignments : [];
-               scheduleState = {
-                   weekStart: activeWeekStart,
-                   weekEnd: '',
-                   weekYear: activeWeekStart.slice(0, 4),
-                   rows: staff.map((person) => {
+               renderPortalDashboard();
+               renderTeamDirectory();
+               const rows = staff.map((person) => {
                        const personAssignments = assignments.filter((item) => item.user_id === person.id);
                        const dayOffs = (scheduleData.day_offs || []).filter((item) => item.user_id === person.id).map((item) => Number(item.day_index));
                        const row = [person.display_name || person.username || 'Staff'];
@@ -1252,13 +1900,14 @@
                        row.push(person.username);
                        row.push(dayOffs);
                        return row;
-                   })
+               });
+               while (rows.length < DEFAULT_ROWS) rows.push(Array(COLS).fill(''));
+               scheduleState = {
+                   weekStart: activeWeekStart,
+                   weekEnd: '',
+                   weekYear: activeWeekStart.slice(0, 4),
+                   rows
                };
-               document.getElementById('weekStart').value = new Date(`${activeWeekStart}T12:00:00`).toLocaleDateString();
-               const weekEnd = new Date(`${activeWeekStart}T12:00:00`);
-               weekEnd.setDate(weekEnd.getDate() + 6);
-               document.getElementById('weekEnd').value = weekEnd.toLocaleDateString();
-               document.getElementById('weekYear').value = activeWeekStart.slice(0, 4);
                renderTableBody();
                assignments.filter((item) => item.is_extra === true).forEach((assignment) => {
                    const staffIndex = staff.findIndex((person) => person.id === assignment.user_id);
@@ -1269,7 +1918,9 @@
                    }
                });
                scheduleState.rows.forEach((row, index) => {
-                   const personAssignments = assignments.filter((item) => item.user_id === staff[index].id);
+                   const person = staff[index];
+                   if (!person) return;
+                   const personAssignments = assignments.filter((item) => item.user_id === person.id);
                    const totalMinutes = personAssignments
                        .reduce((sum, item) => sum + Number(item.end_minute) - Number(item.start_minute), 0);
                    const badge = document.getElementById(`row-total-${index}`);
@@ -1282,7 +1933,8 @@
                populateTimeSelectors(Number(document.getElementById('bookingDay').value));
                if (isAdmin) renderAdminAssignments();
                hasLoadedSchedule = true;
-               setSaveStatus('Online', 'saved');
+               if (!autoDownloadError) setSaveStatus('Online', 'saved');
+               autoDownloadCompletedWeek();
            }
 
            window.loadSchedule = function () {
@@ -1297,7 +1949,7 @@
                    editor.setAttribute('aria-readonly', 'true');
                });
                ['weekStart', 'weekEnd', 'weekYear'].forEach((id) => {
-                   document.getElementById(id).readOnly = !isAdmin;
+                   document.getElementById(id).readOnly = true;
                });
            };
 
@@ -1392,6 +2044,10 @@
                    setAdminStatus(error.message, true);
                    return;
                }
+               applyMaintenanceSettings({
+                   maintenance_enabled: enabled,
+                   maintenance_message: message || DEFAULT_MAINTENANCE_MESSAGE
+               });
                setAdminStatus('Maintenance settings saved.', false);
            }
 
@@ -1405,7 +2061,13 @@
            function setBookingStatus(message, isError) {
                const status = document.getElementById('bookingStatus');
                status.textContent = message;
-               status.className = `text-sm ${isError ? 'text-red-700' : 'text-neutral-600'}`;
+               status.className = `w-full text-center text-sm ${isError ? 'text-red-700' : 'text-neutral-600'}`;
+           }
+
+           function setLeaveStatus(message, isError) {
+               const status = document.getElementById('leaveStatus');
+               status.textContent = message;
+               status.className = `mt-4 w-full text-center text-sm ${isError ? 'text-red-700' : 'text-neutral-600'}`;
            }
 
            function fillAdminTimeOptions() {
@@ -1443,47 +2105,47 @@
                const dayIndex = Number(document.getElementById('bookingDay').value);
                const start = document.getElementById('bookingStart').value;
                const end = document.getElementById('bookingEnd').value;
+               const isExtra = document.getElementById('bookingMode').value === 'extra';
                if (!start || !end) {
-                   setBookingStatus('No time is left for you in this period. Choose another day or time.', true);
+                   setBookingStatus('Choose a start and end time for your shift.', true);
                    return;
                }
+               const startMinute = toOperatingMinute(start, dayIndex);
+               const endMinute = toOperatingMinute(end, dayIndex);
                setBookingStatus('Checking availability...', false);
                const { data, error } = await client.rpc('staff_book_time', {
                    p_week_start: activeWeekStart,
                    p_day_index: dayIndex,
-                   p_start_minute: toOperatingMinute(start, dayIndex),
-                   p_end_minute: toOperatingMinute(end, dayIndex),
-                   p_mode: document.getElementById('bookingMode').value
+                   p_start_minute: startMinute,
+                   p_end_minute: endMinute,
+                   p_mode: isExtra ? 'extra' : 'available'
                });
                if (error) {
-                   setBookingStatus(error.message.includes('No time left')
-                       ? 'No time is left for you in part of that period. Choose another available time.'
-                       : error.message, true);
                    await loadScheduleFromCloud();
+                   setBookingStatus(error.message, true);
                    return;
                }
                const segments = data && Array.isArray(data.segments) ? data.segments : [];
                if (!segments.length) {
-                   setBookingStatus('No time is left for you in that period.', true);
+                   setBookingStatus('No time is available in that window. Choose another period.', true);
                    return;
                }
                const hours = segments.reduce((sum, segment) => sum + segment.end_minute - segment.start_minute, 0) / 60;
-               const extraMessage = document.getElementById('bookingMode').value === 'extra' ? ' as extra/call-in hours' : '';
-               setBookingStatus(`Added ${hours} hour${hours === 1 ? '' : 's'} to the shared schedule${extraMessage}.`, false);
                await loadScheduleFromCloud();
+               setBookingStatus(`Added ${hours} hour${hours === 1 ? '' : 's'} to the shared schedule${isExtra ? ' as extra/call-in hours' : ''}.`, false);
            }
 
            async function markSelectedDayOff() {
                const { error } = await client.rpc('staff_set_day_off', {
                    p_week_start: activeWeekStart,
-                   p_day_index: Number(document.getElementById('bookingDay').value)
+                   p_day_index: Number(document.getElementById('leaveDay').value)
                });
                if (error) {
-                   setBookingStatus(error.message, true);
+                   setLeaveStatus(error.message, true);
                    return;
                }
-               setBookingStatus('Holiday recorded. The schedule shows — for this day.', false);
                await loadScheduleFromCloud();
+               setLeaveStatus('Your day-off request was recorded. The shared schedule will show this day as a holiday.', false);
            }
 
            async function saveAccountChanges() {
@@ -1512,28 +2174,47 @@
                    }
                    document.getElementById('accountUsername').value = currentProfile.username || '';
                    if (!status.textContent) status.textContent = 'Account details saved.';
-                   status.className = 'mt-3 text-sm text-emerald-700';
+                   status.className = 'mt-3 text-center text-sm text-emerald-700';
                } catch (error) {
                    status.textContent = error.message;
-                   status.className = 'mt-3 text-sm text-red-700';
+                   status.className = 'mt-3 text-center text-sm text-red-700';
                }
            }
 
            async function saveCoverageRequirement() {
-               const day = Number(document.getElementById('coverageDay').value);
-               const { error } = await client.rpc('admin_set_coverage', {
-                   p_week_start: activeWeekStart,
-                   p_day_index: day,
-                   p_start_minute: toOperatingMinute(document.getElementById('coverageStart').value, day),
-                   p_end_minute: toOperatingMinute(document.getElementById('coverageEnd').value, day),
-                   p_required_count: Number(document.getElementById('coverageCount').value)
-               });
-               if (error) {
-                   setAdminStatus(error.message, true);
-                   return;
+               setAdminStatus('Saving coverage requirement...', false);
+               try {
+                   const day = Number(document.getElementById('coverageDay').value);
+                   const startValue = document.getElementById('coverageStart').value;
+                   const endValue = document.getElementById('coverageEnd').value;
+                   if (!startValue || !endValue) {
+                       throw new Error('Choose a start and end time for the coverage period.');
+                   }
+                   const startMinute = toOperatingMinute(startValue, day);
+                   const endMinute = toOperatingMinute(endValue, day);
+                   if (endMinute <= startMinute) {
+                       throw new Error('The end time must be after the start time.');
+                   }
+                   const { error } = await client.rpc('admin_set_coverage', {
+                       p_week_start: activeWeekStart,
+                       p_day_index: day,
+                       p_start_minute: startMinute,
+                       p_end_minute: endMinute,
+                       p_required_count: Number(document.getElementById('coverageCount').value)
+                   });
+                   if (error) throw error;
+                   try {
+                       await loadScheduleFromCloud();
+                   } catch (refreshError) {
+                       const message = refreshError instanceof Error ? refreshError.message : String(refreshError);
+                       setAdminStatus(`Coverage updated, but the schedule refresh failed: ${message}`, true);
+                       return;
+                   }
+                   setAdminStatus('Coverage requirement updated and refreshed.', false);
+               } catch (error) {
+                   const message = error instanceof Error ? error.message : String(error);
+                   setAdminStatus(`Coverage could not be updated: ${message}`, true);
                }
-               setAdminStatus('Coverage requirement updated.', false);
-               await loadScheduleFromCloud();
            }
 
            async function updateAssignment(assignment, startValue, endValue, isExtra) {
@@ -1588,6 +2269,10 @@
                date.setDate(date.getDate() - ((day + 6) % 7));
                activeWeekStart = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
                document.getElementById('scheduleWeekInput').value = activeWeekStart;
+               document.getElementById('bookingWeekInput').value = activeWeekStart;
+               document.getElementById('leaveWeekInput').value = activeWeekStart;
+               document.getElementById('adminWeekInput').value = activeWeekStart;
+               updatePrintableWeekRange(activeWeekStart);
                hasLoadedSchedule = false;
                loadScheduleFromCloud().catch((error) => {
                    console.error('Schedule refresh failed:', error);
@@ -1599,6 +2284,7 @@
                if (!session) {
                    currentUser = null;
                    currentProfile = null;
+                   portalAccessBlocked = true;
                    hasLoadedSchedule = false;
                    routeInProgress = '';
                    document.getElementById('applicationView').classList.add('hidden');
@@ -1630,6 +2316,19 @@
                        showSuspendedMessage(profile.role === 'staff');
                        return;
                    }
+                   applyMaintenanceSettings(settings);
+                   if (settings.maintenance_enabled && profile.role !== 'admin') {
+                       showMaintenanceAccessMessage();
+                       const { error: signOutError } = await client.auth.signOut();
+                       if (signOutError) {
+                           console.error('Could not sign out a staff session during maintenance:', signOutError);
+                           setAuthMessage(
+                               `${activeMaintenanceMessage}\n\nStaff access is blocked. Automatic sign-out failed; close this browser window and contact an administrator.`,
+                               'error'
+                           );
+                       }
+                       return;
+                   }
 
                    currentUser = user;
                    currentProfile = profile;
@@ -1641,12 +2340,16 @@
                        activeWeekStart = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
                    }
                    showApplicationView();
-                   document.getElementById('signedInEmail').textContent = user.email || '';
                    document.getElementById('adminPanel').classList.toggle('hidden', !isAdmin);
                    document.getElementById('adminAssignmentPanel').classList.toggle('hidden', !isAdmin);
+                   document.getElementById('adminNavButton').classList.toggle('hidden', !isAdmin);
+                   document.getElementById('leaveNavButton').classList.toggle('hidden', isAdmin || profile.permissions?.book_schedule !== true);
                    document.getElementById('bookingPanel').classList.toggle('hidden', isAdmin || !profile.permissions?.book_schedule);
                    document.getElementById('coveragePanel').classList.toggle('hidden', (!profile.permissions?.view_schedule && !isAdmin) || (settings.maintenance_enabled && !isAdmin));
                    document.getElementById('scheduleWeekInput').value = activeWeekStart;
+                   document.getElementById('bookingWeekInput').value = activeWeekStart;
+                   document.getElementById('leaveWeekInput').value = activeWeekStart;
+                   document.getElementById('adminWeekInput').value = activeWeekStart;
                    document.getElementById('accountUsername').value = profile.username || '';
                    document.getElementById('accountEmail').value = '';
                    document.getElementById('accountPassword').value = '';
@@ -1657,6 +2360,9 @@
 
                    const maintenanceBlocked = !isAdmin && settings.maintenance_enabled;
                    const scheduleBlocked = !isAdmin && profile.permissions?.view_schedule !== true;
+                   portalAccessBlocked = maintenanceBlocked || scheduleBlocked;
+                   document.getElementById('applicationView').classList.toggle('portal-access-blocked', portalAccessBlocked);
+                   document.getElementById('portalSidebar').classList.toggle('hidden', portalAccessBlocked);
                    document.getElementById('maintenanceNotice').classList.toggle('hidden', !maintenanceBlocked);
                    document.getElementById('maintenanceNotice').classList.toggle('flex', maintenanceBlocked);
                    document.getElementById('maintenanceNoticeText').textContent = settings.maintenance_message || DEFAULT_MAINTENANCE_MESSAGE;
@@ -1667,6 +2373,7 @@
                    document.getElementById('bookingPanel').classList.toggle('hidden', isAdmin || !profile.permissions?.book_schedule || maintenanceBlocked || scheduleBlocked);
 
                    if (!maintenanceBlocked && !scheduleBlocked) {
+                       navigatePortal('dashboard');
                        fillAdminTimeOptions();
                        await loadScheduleFromCloud();
                    }
@@ -1739,23 +2446,36 @@
            document.getElementById('signupForm').addEventListener('submit', async (event) => {
                event.preventDefault();
                if (!client) return;
-               const { error } = await client.auth.signUp({
-                   email: document.getElementById('signupEmail').value.trim(),
-                   password: document.getElementById('signupPassword').value,
-                   options: {
-                       data: {
-                           display_name: document.getElementById('signupName').value.trim(),
-                           username: document.getElementById('signupUsername').value.trim().toLowerCase()
-                       },
-                       emailRedirectTo: window.location.origin + window.location.pathname
+               try {
+                   const settings = await loadRuntimeSettings();
+                   applyMaintenanceSettings(settings);
+                   if (settings.maintenance_enabled) {
+                       showAuthForm('login');
+                       setAuthMessage('Staff registration is unavailable during maintenance. Administrator sign-in remains available.', 'error');
+                       return;
                    }
-               });
-               if (error) {
-                   setAuthMessage(error.message, 'error');
-                   return;
+                   const { error } = await client.auth.signUp({
+                       email: document.getElementById('signupEmail').value.trim(),
+                       password: document.getElementById('signupPassword').value,
+                       options: {
+                           data: {
+                               display_name: document.getElementById('signupName').value.trim(),
+                               username: document.getElementById('signupUsername').value.trim().toLowerCase()
+                           },
+                           emailRedirectTo: window.location.origin + window.location.pathname
+                       }
+                   });
+                   if (error) {
+                       setAuthMessage(error.message, 'error');
+                       return;
+                   }
+                   showAuthForm('login');
+                   setAuthMessage('Account created. Check your email and follow the verification link to activate your staff account.', 'success');
+               } catch (error) {
+                   const message = error instanceof Error ? error.message : String(error);
+                   console.error('Staff registration failed:', error);
+                   setAuthMessage(`Staff registration could not be completed: ${message}`, 'error');
                }
-               showAuthForm('login');
-               setAuthMessage('Account created. Check your email and follow the verification link to activate your staff account.', 'success');
            });
 
            document.getElementById('forgotForm').addEventListener('submit', async (event) => {
@@ -1799,21 +2519,34 @@
            document.getElementById('markDayOffButton').addEventListener('click', markSelectedDayOff);
            document.getElementById('saveAccountButton').addEventListener('click', saveAccountChanges);
            document.getElementById('closeAccountPanel').addEventListener('click', () => {
-               document.getElementById('accountPanel').classList.add('hidden');
+               navigatePortal(previousPortalView);
            });
-           document.getElementById('accountButton').addEventListener('click', () => {
-               document.getElementById('accountPanel').classList.toggle('hidden');
+           document.getElementById('dashboardAccountButton').addEventListener('click', () => {
+               navigatePortal('account');
            });
            document.getElementById('coverageDay').addEventListener('change', fillAdminTimeOptions);
            document.getElementById('scheduleWeekInput').addEventListener('change', (event) => setWeekStart(event.target.value));
+           document.getElementById('bookingWeekInput').addEventListener('change', (event) => setWeekStart(event.target.value));
+           document.getElementById('leaveWeekInput').addEventListener('change', (event) => setWeekStart(event.target.value));
+           document.getElementById('adminWeekInput').addEventListener('change', (event) => setWeekStart(event.target.value));
+           document.getElementById('adminAssignmentStaffFilter').addEventListener('change', (event) => {
+               adminAssignmentStaffId = event.target.value;
+               renderAdminAssignments();
+           });
            document.getElementById('refreshScheduleButton').addEventListener('click', () => loadScheduleFromCloud());
            document.getElementById('republishScheduleButton').addEventListener('click', republishSchedule);
+           document.querySelectorAll('.portal-nav-link').forEach((button) => {
+               button.addEventListener('click', () => navigatePortal(button.dataset.portalTarget));
+           });
 
            if (!window.supabase || !window.supabase.createClient) {
                showAuthForm('login');
                setAuthMessage('The Supabase client could not be loaded. Check your internet connection and reload this page.', 'error');
            } else {
                client = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+               loadRuntimeSettings().then(applyMaintenanceSettings).catch((error) => {
+                   console.error('Could not load maintenance status:', error);
+               });
                client.auth.onAuthStateChange((event, session) => {
                    if (event === 'PASSWORD_RECOVERY') {
                        isPasswordRecovery = true;
@@ -1836,7 +2569,14 @@
                    setAuthMessage(error.message, 'error');
                });
                window.setInterval(async () => {
-                   if (!currentUser) return;
+                   if (!currentUser) {
+                       try {
+                           applyMaintenanceSettings(await loadRuntimeSettings());
+                       } catch (error) {
+                           console.error('Could not refresh maintenance status:', error);
+                       }
+                       return;
+                   }
                    try {
                        const [{ data: profile, error: profileError }, settings] = await Promise.all([
                            client.from('profiles').select('role,suspended,permissions,username').eq('id', currentUser.id).single(),
@@ -1856,6 +2596,7 @@
                        }
                        const canBook = !isAdmin && profile.permissions?.book_schedule === true;
                        document.getElementById('bookingPanel').classList.toggle('hidden', !canBook);
+                       document.getElementById('leaveNavButton').classList.toggle('hidden', !isAdmin && !canBook);
                        const maintenanceBlocked = !isAdmin && settings.maintenance_enabled;
                        const scheduleBlocked = profile.permissions?.view_schedule !== true;
                        const accessNoticeShown = scheduleBlocked && !maintenanceBlocked;
